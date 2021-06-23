@@ -1,0 +1,70 @@
+@import '../utilities/variables';
+@import "../utilities/mixins";
+
+/**
+ * 07. ERROR
+ *
+ * -------------------------------------------------------------------
+ */
+.error {
+  height: 100vh;
+  width: 100%;
+
+  // ESTILOS TEXTO ERRO
+  .titulo-error {
+
+    width: 100%;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    // H1 ERROR
+    .h1-error {
+      font-family: $fuente-subtitulo;
+      text-align: center;
+      font-size: 2rem;
+      text-shadow: 0.2rem 0.2rem $blanco;
+      color: $negro;
+
+    }
+
+    //  SPAN ERROR
+    .span-error {
+      font-family: $fuente-subtitulo;
+      text-align: center;
+      font-size: 1.5rem;
+      color: $negro;
+    }
+
+  }
+
+  .centrado {
+    position: relative;
+    width: 800px;
+    height: 500px;
+
+    .svg-error {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  .color-boton-error {
+    background-color: $rosa;
+  }
+
+
+}
+
+/**
+* -------------------------------------------------------------------
+**/

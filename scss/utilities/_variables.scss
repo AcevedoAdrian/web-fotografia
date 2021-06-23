@@ -1,0 +1,50 @@
+
+// Colores
+
+$rosa: #e3bfc6;
+// $rosa-claro: #816e87;
+//  $rosa-claro: #be9aa2;
+// $rosa-claro: #ae9aa2;
+$colorr: #aba8d2;
+
+$blanco: RGBA(255, 255, 255, 1);
+$gris: RGBA(211, 211, 211, 1);
+$gris-oscuro: RGBA(128, 128, 128, 1);
+$negro: RGBA(9, 9, 13, 1);
+$sombra: RGBA(0, 3, 0, 0.7);
+$gris-nuevo: rgb(240, 239, 235);
+
+
+// Grdientes
+$hover-link: rgb(180, 125, 205), rgb(232, 120, 161), rgb(235, 133, 171);
+$blaco-trasparente: rgba(240, 239, 235, 0.8);
+$gradiente-inicio: rgba(250, 206, 194, 0.301) 0%,rgba(255, 209, 255, 0.425) 100%;
+$gradente-contacto : rgba(250, 208, 196,0.7) 0%, rgba(255, 209, 255,0.9)100%;
+
+
+// Puntos de quiebre para las query:
+// $breakpoint-xs: 480px;
+// $breakpoint-sm: 481px;
+// $breakpoint-md: 991px;
+// $breakpoint-lg: 992px;
+
+// Tipografia
+$fuente-titulos: "Dancing Script", cursive;
+$fuente-subtitulo:  "Josefin Slab", serif;
+$fuente-parrafo: 'Montserrat', sans-serif;
+
+// Mapas
+$grosor: (
+  regular: 100, 
+  medium: 200, 
+  bold: 300,
+  extrabold: 400,
+);
+
+// Puntos de quiebre para las query:
+$breakpoints: (
+  xs: 480px,
+  sm: 481px,
+  md: 991px,
+  lg: 992px,
+);

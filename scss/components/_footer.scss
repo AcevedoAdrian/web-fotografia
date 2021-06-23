@@ -1,0 +1,57 @@
+@import '../utilities/variables';
+@import '../utilities/mixins';
+
+/**
+ * 06. FOOTER
+ *
+ * -------------------------------------------------------------------
+ */
+.pie {
+  padding: 1rem;
+  background: $negro;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+
+  
+  .redes {
+    padding: 1rem 2rem;
+
+    .titulo-redes {
+      font-family: $fuente-titulos;
+      margin: 1rem 0;
+      color: $blanco;
+      font-size: 1.5em;
+    }
+
+    .nav-pie a {
+      text-decoration: none;
+      .iconos-redes {
+        width: 10%;
+        padding: 0.5rem;
+      }
+    }
+  }
+  
+  .mapa{
+     iframe{
+      @include media(xs) {
+        width: 70%;
+      }
+     }
+  }
+  .descripcion-pie span {
+    text-align: left;
+    color: $gris-oscuro;
+    font-size: 1rem;
+  }
+  
+}
+
+
+
+/**
+ * -------------------------------------------------------------------
+ **/

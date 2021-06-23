@@ -1,0 +1,853 @@
+@charset "UTF-8";
+/**
+ *  RESETEO DE ESTILOS 
+ *
+ * -------------------------------------------------------------------
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/**
+ *  ESTILOS GENERALES
+ *
+ * -------------------------------------------------------------------
+ */
+html {
+  scroll-behavior: smooth;
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (min-width: 481px) and (max-width: 991px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.sub-titulos {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--NEGRO);
+}
+
+/**
+ * 00. NADVAR
+ *
+ * -------------------------------------------------------------------
+ */
+.header-principal {
+  width: 100%;
+  padding-top: 2rem;
+  position: fixed;
+  top: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  z-index: 10;
+}
+.header-principal .logo {
+  padding: 1rem;
+  width: 9rem;
+}
+.header-principal.logo-pequeño {
+  background: RGBA(0, 3, 0, 0.7);
+  padding-top: 0;
+}
+.header-principal.logo-pequeño .logo {
+  width: 5rem;
+}
+.header-principal .lista-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  /* Animacion Linea Link */
+}
+.header-principal .lista-menu .item {
+  display: inline-block;
+  list-style: none;
+  position: relative;
+  margin: 0 2rem;
+}
+.header-principal .lista-menu .item .link-menu {
+  position: relative;
+  display: block;
+  padding: 5px;
+  font-size: 1rem;
+  color: RGBA(255, 255, 255, 1);
+  text-decoration: none;
+  text-align: center;
+}
+.header-principal .lista-menu .item .link-menu:hover {
+  color: RGBA(211, 211, 211, 1);
+  font-size: 1.1rem;
+}
+.header-principal .lista-menu .item .link-menu::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #b47dcd, #e878a1, #eb85ab);
+  z-index: 9;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+.header-principal .lista-menu .item .link-menu:hover::before {
+  transform: scaleX(1);
+}
+.header-principal .lista-menu[data-animation=to-left] a::before {
+  transform-origin: right;
+}
+.header-principal .lista-menu[data-animation=center] a::before {
+  transform-origin: center;
+}
+.header-principal .lista-menu[data-animation=bonus] a::before {
+  transform-origin: right;
+}
+.header-principal .lista-menu[data-animation=bonus] a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+}
+
+/**
+ * -------------------------------------------------------------------
+ **/
+/**
+ * 01. INICIO
+ *
+ * -------------------------------------------------------------------
+ */
+.inicio {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(250, 206, 194, 0.301) 0%, rgba(255, 209, 255, 0.425) 100%), url("../img/png/portada.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+.inicio .titulo {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.inicio .titulo .titulo-header {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  font-size: 10rem;
+  text-shadow: 0.2rem 0.2rem RGBA(255, 255, 255, 1);
+  background: linear-gradient(to right, RGBA(9, 9, 13, 1) 0, RGBA(211, 211, 211, 1) 10%, RGBA(9, 9, 13, 1) 20%);
+  animation: barrido 9s ease-in-out infinite;
+  animation-fill-mode: forwards;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-size-adjust: none;
+  /* ANIMACION DE BARRIDO A TEXTO ANDREA BARRIOS DEL INICIO */
+}
+@keyframes barrido {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 48vw;
+  }
+}
+@media (max-width: 480px) {
+  .inicio .titulo .titulo-header {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 991px) {
+  .inicio .titulo .titulo-header {
+    font-size: 5rem;
+  }
+}
+.inicio .titulo .subtitulo-header {
+  font-family: "Josefin Slab", serif;
+  text-align: center;
+  font-size: 5rem;
+  letter-spacing: 2rem;
+  color: RGBA(255, 255, 255, 1);
+  text-shadow: 0.2rem 0.2rem RGBA(0, 3, 0, 0.7);
+}
+@media (max-width: 480px) {
+  .inicio .titulo .subtitulo-header {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 991px) {
+  .inicio .titulo .subtitulo-header {
+    font-size: 2rem;
+  }
+}
+.inicio .titulo .boton-sobre-mi {
+  position: absolute;
+  bottom: 4rem;
+  width: 5rem;
+}
+.inicio .titulo .boton-sobre-mi .flecha {
+  /* ANIMACION FLECHA */
+}
+.inicio .titulo .boton-sobre-mi .flecha span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid RGBA(255, 255, 255, 1);
+  border-right: 5px solid RGBA(255, 255, 255, 1);
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: flecha-animada 2s infinite;
+}
+.inicio .titulo .boton-sobre-mi .flecha span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.inicio .titulo .boton-sobre-mi .flecha span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes flecha-animada {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+/**
+ * -------------------------------------------------------------------
+ **/
+/**
+ * 02. SOBRE MI
+ *
+ * -------------------------------------------------------------------
+ */
+.sobre-mi {
+  width: 100%;
+  height: 100vh;
+  padding-top: 5rem;
+  background-image: url("../img/svg/fondo-a.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+@media (max-width: 480px) {
+  .sobre-mi {
+    height: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 991px) {
+  .sobre-mi {
+    height: 100%;
+  }
+}
+.sobre-mi .perfil {
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid RGBA(9, 9, 13, 1);
+}
+.sobre-mi .perfil .foto-perfil {
+  width: 100%;
+  border: 20px solid RGBA(255, 255, 255, 1);
+}
+.sobre-mi .texto-sobre-mi {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(2, auto);
+  column-gap: 0.5em;
+  row-gap: 0.5em;
+}
+.sobre-mi .texto-sobre-mi .sub-titulos-div {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.sobre-mi .texto-sobre-mi p {
+  font-weight: 200;
+  font-size: 1rem;
+  text-align: justify;
+  font-style: none;
+  padding: 4rem;
+  color: RGBA(9, 9, 13, 1);
+}
+.sobre-mi .texto-sobre-mi p:first-letter {
+  font-family: "Dancing Script", cursive;
+  font-size: 6rem;
+  margin: -30px 5px -20px 0;
+  float: left;
+}
+
+/**
+ * -------------------------------------------------------------------
+ **/
+/**
+ * 03. TRABAJOS
+ *
+ * -------------------------------------------------------------------
+ */
+.trabajos {
+  width: 100%;
+  height: 100vh;
+  padding-top: 5rem;
+  background-image: url("../img/svg/fondo-b.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+@media (max-width: 480px) {
+  .trabajos {
+    height: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 991px) {
+  .trabajos {
+    height: 100%;
+  }
+}
+.trabajos .sub-titulos-div {
+  padding-top: 0rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.trabajos .galeria-tabajos {
+  width: 100%;
+  height: 60vh;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+@media (max-width: 480px) {
+  .trabajos .galeria-tabajos {
+    display: none;
+  }
+}
+.trabajos .galeria-tabajos .foto-trabajos {
+  height: 100%;
+  width: 10%;
+  filter: grayscale(100%);
+  transition: transform 0.5s;
+  object-fit: cover;
+  flex-grow: 1;
+}
+.trabajos .galeria-tabajos .foto-trabajos:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+  width: 30%;
+  margin: 0 2rem;
+  transition: transform 0.5s;
+  object-fit: fill;
+}
+.trabajos .texto-trabajos-div {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.trabajos .texto-trabajos-div p {
+  background: url("../img/gif/cierra.gif") no-repeat right bottom;
+  padding-left: 18px;
+  padding-right: 18px;
+  text-indent: -18px;
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-align: justify;
+  color: RGBA(9, 9, 13, 1);
+}
+.trabajos .texto-trabajos-div p:first-letter {
+  background: url("../img/gif/abre.gif") no-repeat left top;
+  padding-left: 18px;
+}
+.trabajos .galeria-tabajos-movil {
+  display: none;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(1, auto);
+  row-gap: 0.5rem;
+}
+@media (max-width: 480px) {
+  .trabajos .galeria-tabajos-movil {
+    display: grid;
+  }
+}
+.trabajos .galeria-tabajos-movil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: auto;
+  border: 1px solid var(--GRIS);
+  box-shadow: 1rem 1rem 2rem var(--SOMBRAS);
+}
+
+/**
+ * -------------------------------------------------------------------
+ **/
+/**
+ * 04. SERVICIOS
+ *
+ * -------------------------------------------------------------------
+ */
+.servicios {
+  padding-top: 5rem;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/jpg/camara.jpg);
+  text-align: center;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.servicios::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 481px) and (max-width: 991px) {
+  .servicios {
+    height: auto;
+  }
+}
+.servicios .sub-titulos-div {
+  padding-top: 0rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  color: RGBA(255, 255, 255, 1);
+}
+.servicios .polaroid-grid {
+  width: 100%;
+  height: 70vh;
+  perspective: 1000px;
+  display: inline-block;
+}
+@media (max-width: 480px) {
+  .servicios .polaroid-grid {
+    margin: 2rem 0;
+    width: 100%;
+    height: 30vh;
+  }
+}
+@media (min-width: 481px) and (max-width: 991px) {
+  .servicios .polaroid-grid {
+    margin: 3rem auto;
+    width: 100%;
+    height: 40vh;
+  }
+}
+.servicios .polaroid-grid .polaroid-container {
+  width: 100%;
+  height: 100%;
+}
+.servicios .polaroid-grid .polaroid-container:hover .flipper {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+.servicios .polaroid-grid .polaroid-container .flipper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+}
+.servicios .polaroid-grid .polaroid-container .flipper .polaroid-frontal {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  z-index: 2;
+}
+.servicios .polaroid-grid .polaroid-container .flipper .polaroid-frontal .servicio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid RGBA(0, 3, 0, 0.7);
+  box-shadow: 1rem 1rem 2rem RGBA(0, 3, 0, 0.7);
+}
+.servicios .polaroid-grid .polaroid-container .flipper .polaroid-frontal .titulo-frontal-polaroid {
+  background: rgba(240, 239, 235, 0.8);
+  position: relative;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+.servicios .polaroid-grid .polaroid-container .flipper .polaroid-detras {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/png/fondoFoto.png);
+  background-size: cover;
+  padding: 2rem;
+  border: 1px solid RGBA(0, 3, 0, 0.7);
+  object-fit: cover;
+  box-shadow: 1rem 1rem 2rem RGBA(0, 3, 0, 0.7);
+  z-index: 3;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+.servicios .polaroid-grid .polaroid-container .flipper .polaroid-detras .titulo-detras-polaroid {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem;
+}
+@media (max-width: 480px) {
+  .servicios .polaroid-grid .polaroid-container .flipper .polaroid-detras .titulo-detras-polaroid {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 991px) {
+  .servicios .polaroid-grid .polaroid-container .flipper .polaroid-detras .titulo-detras-polaroid {
+    font-size: 2rem;
+  }
+}
+.servicios .polaroid-grid .polaroid-container .flipper .polaroid-detras .texto-polaroid {
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-align: justify;
+  font-style: italic;
+  padding: 1rem;
+  color: RGBA(9, 9, 13, 1);
+}
+@media (max-width: 480px) {
+  .servicios .polaroid-grid .polaroid-container .flipper .polaroid-detras .texto-polaroid {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 991px) {
+  .servicios .polaroid-grid .polaroid-container .flipper .polaroid-detras .texto-polaroid {
+    font-size: 1rem;
+  }
+}
+.servicios .containert-seccion-movile {
+  width: 100%;
+  margin-top: 8rem;
+}
+.servicios .containert-seccion-movile .titulo-servicio-movile {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2rem;
+  color: RGBA(255, 255, 255, 1);
+}
+.servicios .containert-seccion-movile .texto-servicio-movile {
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-align: justify;
+  font-style: none;
+  padding: 3rem;
+  color: RGBA(9, 9, 13, 1);
+  color: RGBA(255, 255, 255, 1);
+}
+
+/**
+ * -------------------------------------------------------------------
+ **/
+/**
+ * 04. SERVICIOS
+ *
+ * -------------------------------------------------------------------
+ */
+.servicios-movile {
+  width: 100%;
+  padding-top: 5rem;
+  background-image: url(../img/jpg/camara.jpg);
+  text-align: center;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.servicios-movile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+@media (min-width: 481px) and (max-width: 991px) {
+  .servicios-movile {
+    height: 120vh;
+  }
+}
+.servicios-movile .sub-titulos-div-movile {
+  padding-top: 0rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.servicios-movile .containert-seccion-movile {
+  width: 100%;
+}
+/**
+ * 05. GALERIA PERSONAL
+ *
+ * -------------------------------------------------------------------
+ */
+.galeria-personal {
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .galeria-personal {
+    height: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 991px) {
+  .galeria-personal {
+    height: 100%;
+  }
+}
+.galeria-personal .sub-titulos-div {
+  padding-top: 0rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.galeria-personal .sub-titulos-div {
+  position: relative;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.galeria-personal .carousel {
+  height: 100vh;
+}
+
+/**
+ * -------------------------------------------------------------------
+ **/
+/**
+ * 06. CONTACTO
+ *
+ * -------------------------------------------------------------------
+ */
+.contacto {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/jpg/servicios/servicio-1.jpg);
+  text-align: center;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.contacto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.contacto .fondo-contacto {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  background-image: url(../img/png/fondoFoto.png);
+  background-size: cover;
+  padding: 2rem;
+  border: 1px solid RGBA(211, 211, 211, 1);
+}
+.contacto .fondo-contacto .sub-titulos-div {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.contacto .fondo-contacto p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: justify;
+  padding: 1rem;
+  color: RGBA(9, 9, 13, 1);
+}
+.contacto .fondo-contacto .color-boton {
+  background-color: #e3bfc6;
+}
+
+/**
+ * -------------------------------------------------------------------
+ **/
+/**
+ * 06. FOOTER
+ *
+ * -------------------------------------------------------------------
+ */
+.pie {
+  padding: 1rem;
+  background: RGBA(9, 9, 13, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.pie .redes {
+  padding: 1rem 2rem;
+}
+.pie .redes .titulo-redes {
+  font-family: "Dancing Script", cursive;
+  margin: 1rem 0;
+  color: RGBA(255, 255, 255, 1);
+  font-size: 1.5em;
+}
+.pie .redes .nav-pie a {
+  text-decoration: none;
+}
+.pie .redes .nav-pie a .iconos-redes {
+  width: 10%;
+  padding: 0.5rem;
+}
+@media (max-width: 480px) {
+  .pie .mapa iframe {
+    width: 70%;
+  }
+}
+.pie .descripcion-pie span {
+  text-align: left;
+  color: RGBA(128, 128, 128, 1);
+  font-size: 1rem;
+}
+
+/**
+ * -------------------------------------------------------------------
+ **/
+/**
+ * 07. ERROR
+ *
+ * -------------------------------------------------------------------
+ */
+.error {
+  height: 100vh;
+  width: 100%;
+}
+.error .titulo-error {
+  width: 100%;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.error .titulo-error .h1-error {
+  font-family: "Josefin Slab", serif;
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 0.2rem 0.2rem RGBA(255, 255, 255, 1);
+  color: RGBA(9, 9, 13, 1);
+}
+.error .titulo-error .span-error {
+  font-family: "Josefin Slab", serif;
+  text-align: center;
+  font-size: 1.5rem;
+  color: RGBA(9, 9, 13, 1);
+}
+.error .centrado {
+  position: relative;
+  width: 800px;
+  height: 500px;
+}
+.error .centrado .svg-error {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.error .color-boton-error {
+  background-color: #e3bfc6;
+}
+
+/**
+* -------------------------------------------------------------------
+**/
+
+/*# sourceMappingURL=style.css.map */

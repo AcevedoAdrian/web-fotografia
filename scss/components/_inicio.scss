@@ -1,0 +1,143 @@
+@import '../utilities/variables';
+@import "../utilities/mixins";
+/**
+ * 01. INICIO
+ *
+ * -------------------------------------------------------------------
+ */
+
+.inicio {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to top, $gradiente-inicio),
+    url("../img/png/portada.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  // @include fondo-seccion($gradiente-inicio, "../img/png/portada-9.png");
+
+  // ESTILOS TEXTOS ANDREA BARRIOS - FOTOGRAFIA
+  .titulo {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    // H2 Barrios Andre
+    .titulo-header {
+      font-family: $fuente-titulos;
+      text-align: center;
+      font-size: 10rem;
+      text-shadow: 0.2rem 0.2rem $blanco;
+      background: linear-gradient(to right,
+          $negro 0,
+          $gris 10%,
+          $negro 20%);
+      animation: barrido 9s ease-in-out infinite;
+      animation-fill-mode: forwards;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-size-adjust: none;
+
+      /* ANIMACION DE BARRIDO A TEXTO ANDREA BARRIOS DEL INICIO */
+      @keyframes barrido {
+        0% {
+          background-position: 0;
+        }
+
+        50% {
+          background-position: 48vw;
+        }
+      }
+
+      // tamaño de fuente para celulares
+      @include media(xs) {
+        font-size: 4rem;
+      }
+
+      // tamaño de fuente para tablet
+      @include media(sm) {
+        font-size: 5rem;
+      }
+    }
+
+    // H1 FOTOGRAFIA
+    .subtitulo-header {
+      font-family: $fuente-subtitulo;
+      text-align: center;
+      font-size: 5rem;
+      letter-spacing: 2rem;
+      color: $blanco;
+      text-shadow: 0.2rem 0.2rem $sombra;
+
+      // tamaño de fuente para celulares
+      @include media(xs) {
+        font-size: 1rem;
+      }
+
+      // tamaño de fuente para tablet
+      @include media(sm) {
+        font-size: 2rem;
+      }
+
+    }
+
+    // Flechas
+    .boton-sobre-mi {
+      position: absolute;
+      bottom: 4rem;
+      width: 5rem;
+
+      .flecha {
+
+        & span {
+          display: block;
+          width: 30px;
+          height: 30px;
+          border-bottom: 5px solid $blanco;
+          border-right: 5px solid $blanco;
+          transform: rotate(45deg);
+          margin: -10px;
+          animation: flecha-animada 2s infinite;
+
+          &:nth-child(2) {
+            animation-delay: -0.2s;
+          }
+
+          &:nth-child(3) {
+            animation-delay: -0.4s;
+          }
+        }
+
+        /* ANIMACION FLECHA */
+        @keyframes flecha-animada {
+          0% {
+            opacity: 0;
+            transform: rotate(45deg) translate(-20px, -20px);
+          }
+
+          50% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 0;
+            transform: rotate(45deg) translate(20px, 20px);
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+}
+
+/**
+ * -------------------------------------------------------------------
+ **/

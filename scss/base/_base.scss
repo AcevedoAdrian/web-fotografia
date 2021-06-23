@@ -1,0 +1,34 @@
+// Seteando valores globales valores que vien por defecto 
+@import '../utilities/variables';
+@import "../utilities/mixins";
+
+/**
+ *  ESTILOS GENERALES
+ *
+ * -------------------------------------------------------------------
+ */
+
+html {
+  scroll-behavior: smooth;
+
+  // tamaño de fuente para celulares
+  @include media(xs){
+    font-size: 10px;
+  }
+   // tamaño de fuente para tablet
+  @include media(sm){
+    font-size: 12px;
+  }
+  
+}
+body{
+  font-family: $fuente-parrafo;
+}
+
+.sub-titulos {
+  font-family: $fuente-titulos;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--NEGRO);
+}
+

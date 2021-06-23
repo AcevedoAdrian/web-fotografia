@@ -1,0 +1,118 @@
+// 00. NADVAR
+@import "../utilities/variables";
+/**
+ * 00. NADVAR
+ *
+ * -------------------------------------------------------------------
+ */
+.header-principal {
+  width: 100%;
+  padding-top: 2rem;
+  position: fixed;
+  top: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  z-index: 10;
+
+  // Logo
+  .logo {
+    padding: 1rem;
+    width: 9rem;
+  }
+
+  // Efecto al scrollear, cambio el color del fondo
+  &.logo-pequeño {
+    background: $sombra;
+    padding-top: 0;
+
+    // Efecto al scrollear, cambio el tamaño del logo
+    & .logo {
+      width: 5rem;
+    }
+  }
+
+  // NADVAR
+
+  // ul
+  .lista-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    // li
+    .item {
+      display: inline-block;
+      list-style: none;
+      position: relative;
+      margin: 0 2rem;
+
+
+      // a
+      .link-menu {
+        position: relative;
+        display: block;
+        padding: 5px;
+        font-size: 1rem;
+        color: $blanco;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover {
+          color: $gris;
+          font-size: 1.1rem;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(to right, $hover-link);
+          z-index: 9;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.5s ease-in-out;
+        }
+
+        &:hover::before {
+          transform: scaleX(1);
+        }
+
+      }
+      
+    }
+
+    /* Animacion Linea Link */
+    &[data-animation="to-left"] a::before {
+      transform-origin: right;
+    }
+
+    &[data-animation="center"] a::before {
+      transform-origin: center;
+    }
+
+    &[data-animation="bonus"] a::before {
+      transform-origin: right;
+    }
+
+    &[data-animation="bonus"] a:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+      transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+    }
+
+
+  }
+
+
+
+}
+
+/**
+ * -------------------------------------------------------------------
+ **/

@@ -1,0 +1,79 @@
+@import './variables';
+
+// Estilos de para lso subtitulos con flex
+@mixin estilos-subtitulos($tipo-direccion, $padding-top, $padding-botoom) {
+  padding-top: $padding-top ;
+  padding-bottom: $padding-botoom;
+  display: flex;
+  flex-direction: $tipo-direccion;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+
+// Estilos para los fondos con un gradiente
+@mixin fondo-seccion($gradiente-inicio, $url) {
+  background-image: linear-gradient(to top, $gradiente-inicio),
+    url($url);
+  background-attachment: fixed;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 100%;
+}
+
+
+// Mixin que permite aplicar las querys mas solamente llamando al mixin que queremos aplicar
+// @mixin media($media) {
+//   // celular
+//   @if $media == xs {
+//     @media (max-width: $breakpoint-sm) { @content; }
+//   }
+//   // tablet
+//   @else if $media == sm {
+//     @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) { @content; }
+//   }
+//   // pc
+//   @else if $media == md {
+//     @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) { @content; }
+//   }
+//   // pc resolucion mayor
+//   @else if $media == lg {
+//     @media (min-width: $breakpoint-lg) { @content; }
+//   }
+// }
+
+// Aplicando media querys mas personalizadas sobre un elemento
+@mixin media($media) {
+    // celular
+    @if $media == xs {
+      @media (max-width: map-get($breakpoints, $media)) { @content; }
+    }
+    // tablet
+    @else if $media == sm {
+      @media (min-width: map-get($breakpoints, $media)) and (max-width: map-get($breakpoints, md)) { @content; }
+    }
+    // pc
+    @else if $media == md {
+      @media (min-width: map-get($breakpoints, $media+1)) and (max-width: map-get($breakpoints, $lg)) { @content; }
+    }
+    // pc resolucion mayor
+    @else if $media == lg {
+      @media (min-width: map-get($breakpoints, $media+1)) { @content; }
+    }
+  }
+
+  // Para estilizar los textos
+  @mixin texto($tamano , $padding, $italica, $tipo-grosor) {
+
+    font-weight: map-get($grosor ,  $tipo-grosor );      
+    font-size: $tamano;
+    text-align: justify;
+    @if $italica == si {
+      font-style: italic;
+    }@else {
+      font-style: none;
+    }
+    padding:  $padding;
+    color: $negro;
+  }
