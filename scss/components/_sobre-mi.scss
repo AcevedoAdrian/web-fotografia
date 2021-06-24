@@ -10,11 +10,14 @@
   width: 100%;
   height: 100vh;
   padding-top: 5rem;
+  // background-color: #EDE7F6;
+  background-color: $rosa-claro;
   background-image: 
-    url("../img/svg/fondo-a.svg");
+    url("../img/svg/fondo-a2.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: center center;
   background-size: 100% 100%;
+  
   @include media(xs) {
         height: 100%;
   }
@@ -52,7 +55,7 @@
       // text-align: justify;
       // padding: 4rem;
       // color: $negro;
-      @include texto(1rem, 4rem, no, medium);
+      @include texto(1rem, 4rem, no, bold);
 
       // Primera letra 
       &:first-letter {

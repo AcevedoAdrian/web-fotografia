@@ -10,6 +10,7 @@
 
   width: 100%;
   height: 100vh;
+  padding: 5% 0 ;
   background-image: url(../img/jpg/servicios/servicio-1.jpg);
   text-align: center;
   background-position: center center;
@@ -24,12 +25,12 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   .fondo-contacto {
     position: relative;
-    width: 90%;
+    width: 100%;
     height: 100%;
     background-image: url(../img/png/fondoFoto.png);
     background-size: cover;
@@ -38,7 +39,7 @@
 
 
     .sub-titulos-div {
-      @include estilos-subtitulos(row, 4rem, 1rem);
+      @include estilos-subtitulos(row, 1rem, 1rem);
     }
 
     p {
