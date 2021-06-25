@@ -3,13 +3,14 @@
     <style>
       .cls-1 {
         font-size: 600px;
-        fill: #f8f7f2;
+        fill: #f3e5f5;
         font-family: "Dancing Script";
         font-weight: 700;
       }
     </style>
   </defs>
   <g id="Mesa_de_trabajo_1" data-name="Mesa de trabajo 1">
-    <text id="AB" class="cls-1" x="587.372" y="691.874">AB</text>
+    <text id="A" class="cls-1" x="-17.629" y="730.874">A</text>
+    <text id="B" class="cls-1" x="1575.838" y="729.874">B</text>
   </g>
 </svg>

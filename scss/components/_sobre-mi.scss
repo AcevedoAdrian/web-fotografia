@@ -46,7 +46,7 @@
     row-gap: .5em;
 
     .sub-titulos-div {
-      @include estilos-subtitulos(row, 4rem, 1rem);
+      @include estilos-subtitulos(column, 4rem, 1rem);
     }
 
     p {
