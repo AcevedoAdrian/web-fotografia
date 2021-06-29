@@ -18,11 +18,6 @@ $gradiente-inicio: rgba(250, 206, 194, 0.301) 0%,rgba(255, 209, 255, 0.425) 100%
 $gradente-contacto : rgba(250, 208, 196,0.7) 0%, rgba(255, 209, 255,0.9)100%;
 
 
-// Puntos de quiebre para las query:
-// $breakpoint-xs: 480px;
-// $breakpoint-sm: 481px;
-// $breakpoint-md: 991px;
-// $breakpoint-lg: 992px;
 
 // Tipografia
 $fuente-titulos: "Dancing Script", cursive;
@@ -39,8 +34,10 @@ $grosor: (
 
 // Puntos de quiebre para las query:
 $breakpoints: (
-  xs: 480px,
-  sm: 481px,
-  md: 991px,
+  xs: 0,
+  sm: 576px,
+  md: 768px,
   lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
 );

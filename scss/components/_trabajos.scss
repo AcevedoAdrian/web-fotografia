@@ -7,10 +7,7 @@
  * -------------------------------------------------------------------
  */
 .trabajos {
-  width: 100%;
-  height: 100vh;
-  padding-top: 5rem;
-
+  
   background-color: $rosa-claro;
   background-image: 
     url("../img/svg/fondo-b.svg");
@@ -34,7 +31,7 @@
   // Lista de Fotss
   .galeria-tabajos {
     width: 100%;
-    height: 60vh;
+    height: 60%;
     @include estilos-subtitulos(row, 1rem, 2rem);
     flex-grow: 1;
 

@@ -19,12 +19,12 @@
 html {
   scroll-behavior: smooth;
 }
-@media (max-width: 480px) {
+@media (max-width: 0) and (max-width: 576px) {
   html {
     font-size: 10px;
   }
 }
-@media (min-width: 481px) and (max-width: 991px) {
+@media (min-width: 577px) and (max-width: 768px) {
   html {
     font-size: 12px;
   }
@@ -32,6 +32,23 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  height: 100%;
+}
+
+.row {
+  height: 100%;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sub-titulos {
@@ -134,8 +151,6 @@ body {
  * -------------------------------------------------------------------
  */
 .inicio {
-  height: 100vh;
-  width: 100%;
   background-image: linear-gradient(to top, rgba(250, 206, 194, 0.301) 0%, rgba(255, 209, 255, 0.425) 100%), url("../img/png/portada.png");
   background-attachment: fixed;
   background-repeat: no-repeat, no-repeat;
@@ -143,7 +158,7 @@ body {
   background-size: 100% 100%;
 }
 .inicio .titulo {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -172,12 +187,12 @@ body {
     background-position: 48vw;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 0) and (max-width: 576px) {
   .inicio .titulo .titulo-header {
     font-size: 4rem;
   }
 }
-@media (min-width: 481px) and (max-width: 991px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .inicio .titulo .titulo-header {
     font-size: 5rem;
   }
@@ -190,12 +205,12 @@ body {
   color: RGBA(255, 255, 255, 1);
   text-shadow: 0.2rem 0.2rem RGBA(0, 3, 0, 0.7);
 }
-@media (max-width: 480px) {
+@media (max-width: 0) and (max-width: 576px) {
   .inicio .titulo .subtitulo-header {
     font-size: 1rem;
   }
 }
-@media (min-width: 481px) and (max-width: 991px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .inicio .titulo .subtitulo-header {
     font-size: 2rem;
   }
@@ -247,23 +262,15 @@ body {
  * -------------------------------------------------------------------
  */
 .sobre-mi {
-  width: 100%;
-  height: 100vh;
-  padding-top: 5rem;
   background-color: #EDE7F6;
   background-image: url("../img/svg/fondo-a2.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: center center;
   background-size: 100% 100%;
 }
-@media (max-width: 480px) {
+@media (min-width: 769px) and (max-width: 992px) {
   .sobre-mi {
-    height: 100%;
-  }
-}
-@media (min-width: 481px) and (max-width: 991px) {
-  .sobre-mi {
-    height: 100%;
+    height: 100% !important;
   }
 }
 .sobre-mi .perfil {
@@ -291,7 +298,7 @@ body {
   row-gap: 0.5em;
 }
 .sobre-mi .texto-sobre-mi .sub-titulos-div {
-  padding-top: 4rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
@@ -302,10 +309,9 @@ body {
 }
 .sobre-mi .texto-sobre-mi p {
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.4rem;
   text-align: justify;
-  font-style: none;
-  padding: 4rem;
+  padding: 1rem;
   color: RGBA(9, 9, 13, 1);
 }
 .sobre-mi .texto-sobre-mi p:first-letter {
@@ -324,20 +330,17 @@ body {
  * -------------------------------------------------------------------
  */
 .trabajos {
-  width: 100%;
-  height: 100vh;
-  padding-top: 5rem;
   background-color: #EDE7F6;
   background-image: url("../img/svg/fondo-b.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: 100% 100%;
 }
-@media (max-width: 480px) {
+@media (max-width: 0) and (max-width: 576px) {
   .trabajos {
     height: 100%;
   }
 }
-@media (min-width: 481px) and (max-width: 991px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .trabajos {
     height: 100%;
   }
@@ -354,7 +357,7 @@ body {
 }
 .trabajos .galeria-tabajos {
   width: 100%;
-  height: 60vh;
+  height: 60%;
   padding-top: 1rem;
   padding-bottom: 2rem;
   display: flex;
@@ -365,7 +368,7 @@ body {
   justify-content: center;
   flex-grow: 1;
 }
-@media (max-width: 480px) {
+@media (max-width: 0) and (max-width: 576px) {
   .trabajos .galeria-tabajos {
     display: none;
   }
@@ -416,7 +419,7 @@ body {
   grid-template-rows: repeat(1, auto);
   row-gap: 0.5rem;
 }
-@media (max-width: 480px) {
+@media (max-width: 0) and (max-width: 576px) {
   .trabajos .galeria-tabajos-movil {
     display: grid;
   }
@@ -439,9 +442,6 @@ body {
  * -------------------------------------------------------------------
  */
 .servicios {
-  padding-top: 5rem;
-  width: 100%;
-  height: 100vh;
   background-image: url(../img/svg/fondo-ab.svg);
   text-align: center;
   background-position: center center;
@@ -449,10 +449,7 @@ body {
   background-repeat: no-repeat;
   position: relative;
 }
-@media (min-width: 481px) and (max-width: 991px) {
-  .servicios {
-    height: auto;
-  }
+@media (min-width: 577px) and (max-width: 768px) {
   .servicios::before {
     content: "";
     position: absolute;
@@ -474,41 +471,44 @@ body {
   justify-content: center;
   color: RGBA(9, 9, 13, 1);
 }
-@media (min-width: 481px) and (max-width: 991px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .servicios .sub-titulos-div {
     color: RGBA(255, 255, 255, 1);
   }
 }
-.servicios .polaroid-grid {
+.servicios .col-poladoid {
+  height: 100%;
+}
+.servicios .col-poladoid .polaroid-grid {
   width: 100%;
-  height: 70vh;
+  height: 70%;
   perspective: 1000px;
   display: inline-block;
 }
-@media (max-width: 480px) {
-  .servicios .polaroid-grid {
+@media (max-width: 0) and (max-width: 576px) {
+  .servicios .col-poladoid .polaroid-grid {
     margin: 2rem 0;
     width: 100%;
-    height: 30vh;
+    height: 30%;
   }
 }
-@media (min-width: 481px) and (max-width: 991px) {
-  .servicios .polaroid-grid {
+@media (min-width: 577px) and (max-width: 768px) {
+  .servicios .col-poladoid .polaroid-grid {
     margin: 3rem auto;
     width: 100%;
-    height: 40vh;
+    height: 40%;
   }
 }
-.servicios .polaroid-grid .polaroid-container {
+.servicios .col-poladoid .polaroid-grid .polaroid-container {
   width: 100%;
   height: 100%;
 }
-.servicios .polaroid-grid .polaroid-container:hover .flipper {
+.servicios .col-poladoid .polaroid-grid .polaroid-container:hover .flipper {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
 }
-.servicios .polaroid-grid .polaroid-container .flipper {
+.servicios .col-poladoid .polaroid-grid .polaroid-container .flipper {
   width: 100%;
   height: 100%;
   position: relative;
@@ -519,20 +519,20 @@ body {
   -moz-transition: 0.6s;
   -moz-transform-style: preserve-3d;
 }
-.servicios .polaroid-grid .polaroid-container .flipper .polaroid-frontal {
+.servicios .col-poladoid .polaroid-grid .polaroid-container .flipper .polaroid-frontal {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   position: absolute;
   z-index: 2;
 }
-.servicios .polaroid-grid .polaroid-container .flipper .polaroid-frontal .servicio-img {
+.servicios .col-poladoid .polaroid-grid .polaroid-container .flipper .polaroid-frontal .servicio-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   box-shadow: 1rem 1rem 2rem RGBA(0, 3, 0, 0.7);
 }
-.servicios .polaroid-grid .polaroid-container .flipper .polaroid-frontal .titulo-frontal-polaroid {
+.servicios .col-poladoid .polaroid-grid .polaroid-container .flipper .polaroid-frontal .titulo-frontal-polaroid {
   background: rgba(240, 239, 235, 0.8);
   position: relative;
   bottom: 50%;
@@ -542,7 +542,7 @@ body {
   font-size: 3rem;
   text-align: center;
 }
-.servicios .polaroid-grid .polaroid-container .flipper .polaroid-detras {
+.servicios .col-poladoid .polaroid-grid .polaroid-container .flipper .polaroid-detras {
   backface-visibility: hidden;
   position: absolute;
   width: 100%;
@@ -557,24 +557,24 @@ body {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
 }
-.servicios .polaroid-grid .polaroid-container .flipper .polaroid-detras .titulo-detras-polaroid {
+.servicios .col-poladoid .polaroid-grid .polaroid-container .flipper .polaroid-detras .titulo-detras-polaroid {
   font-family: "Dancing Script", cursive;
   font-size: 3rem;
   text-align: center;
   margin: 2rem;
 }
-@media (max-width: 480px) {
-  .servicios .polaroid-grid .polaroid-container .flipper .polaroid-detras .titulo-detras-polaroid {
+@media (max-width: 0) and (max-width: 576px) {
+  .servicios .col-poladoid .polaroid-grid .polaroid-container .flipper .polaroid-detras .titulo-detras-polaroid {
     font-size: 2rem;
     margin: 1rem;
   }
 }
-@media (min-width: 481px) and (max-width: 991px) {
-  .servicios .polaroid-grid .polaroid-container .flipper .polaroid-detras .titulo-detras-polaroid {
+@media (min-width: 577px) and (max-width: 768px) {
+  .servicios .col-poladoid .polaroid-grid .polaroid-container .flipper .polaroid-detras .titulo-detras-polaroid {
     font-size: 2rem;
   }
 }
-.servicios .polaroid-grid .polaroid-container .flipper .polaroid-detras .texto-polaroid {
+.servicios .col-poladoid .polaroid-grid .polaroid-container .flipper .polaroid-detras .texto-polaroid {
   font-weight: 300;
   font-size: 1.2rem;
   text-align: justify;
@@ -582,18 +582,18 @@ body {
   padding: 1rem;
   color: RGBA(9, 9, 13, 1);
 }
-@media (max-width: 480px) {
-  .servicios .polaroid-grid .polaroid-container .flipper .polaroid-detras .texto-polaroid {
+@media (max-width: 0) and (max-width: 576px) {
+  .servicios .col-poladoid .polaroid-grid .polaroid-container .flipper .polaroid-detras .texto-polaroid {
     font-size: 0.8rem;
   }
 }
-@media (min-width: 481px) and (max-width: 991px) {
-  .servicios .polaroid-grid .polaroid-container .flipper .polaroid-detras .texto-polaroid {
+@media (min-width: 577px) and (max-width: 768px) {
+  .servicios .col-poladoid .polaroid-grid .polaroid-container .flipper .polaroid-detras .texto-polaroid {
     font-size: 1rem;
   }
 }
 .servicios .containert-seccion-movile {
-  width: 100%;
+  height: 100%;
   margin-top: 8rem;
 }
 .servicios .containert-seccion-movile .titulo-servicio-movile {
@@ -640,9 +640,9 @@ body {
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
 }
-@media (min-width: 481px) and (max-width: 991px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .servicios-movile {
-    height: 120vh;
+    height: 120%;
   }
 }
 .servicios-movile .sub-titulos-div-movile {
@@ -663,16 +663,12 @@ body {
  *
  * -------------------------------------------------------------------
  */
-.galeria-personal {
-  width: 100%;
-  padding-top: 5rem;
-}
-@media (max-width: 480px) {
+@media (max-width: 0) and (max-width: 576px) {
   .galeria-personal {
     height: 100%;
   }
 }
-@media (min-width: 481px) and (max-width: 991px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .galeria-personal {
     height: 100%;
   }
@@ -687,9 +683,6 @@ body {
   align-content: center;
   justify-content: center;
 }
-.galeria-personal .carousel {
-  height: 100vh;
-}
 .galeria-personal .carousel .carousel-inner {
   height: 100%;
 }
@@ -698,7 +691,7 @@ body {
 }
 .galeria-personal .carousel-image {
   display: block;
-  height: 90vh;
+  height: 90%;
   /* set min-width, allow images to set cell width */
   min-width: 300px;
   max-width: 50%;
@@ -718,8 +711,6 @@ body {
  * -------------------------------------------------------------------
  */
 .contacto {
-  width: 100%;
-  height: 100vh;
   padding: 5% 0;
   background-image: url(../img/jpg/servicios/servicio-1.jpg);
   text-align: center;
@@ -799,7 +790,7 @@ body {
   width: 10%;
   padding: 0.5rem;
 }
-@media (max-width: 480px) {
+@media (max-width: 0) and (max-width: 576px) {
   .pie .mapa iframe {
     width: 70%;
   }

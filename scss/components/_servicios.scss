@@ -7,9 +7,6 @@
  * -------------------------------------------------------------------
  */
 .servicios {
-  padding-top: 5rem;
-  width: 100%;
-  height: 100vh;
   // background-color: $gris;
   background-image: url(../img/svg/fondo-ab.svg);
   text-align: center;
@@ -18,161 +15,156 @@
   background-repeat: no-repeat;
   position: relative;
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   right: 0;
-  //   background-color: rgba(0, 0, 0, 0.2);
-  // }
-
   // tamaño de fuente para tablet
   @include media(sm) {
 
-    height: auto;
     &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-    
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
   }
 
   .sub-titulos-div {
     @include estilos-subtitulos(row, 0rem, 3rem);
     color: $negro;
+
     @include media(sm) {
       color: $blanco;
     }
   }
 
-  .polaroid-grid {
-    width: 100%;
-    height: 70vh;
-    perspective: 1000px;
-    display: inline-block;
+  .col-poladoid {
+    height: 100%;
 
-    // tamaño de fuente para celulares
-    @include media(xs) {
-      margin: 2rem 0;
+    .polaroid-grid {
       width: 100%;
-      height: 30vh;
-    }
+      height: 70%;
+      perspective: 1000px;
+      display: inline-block;
 
-    // tamaño de fuente para tablet
-    @include media(sm) {
-      margin: 3rem auto;
-      width: 100%;
-      height: 40vh;
-    }
-
-    .polaroid-container {
-      width: 100%;
-      height: 100%;
-
-      &:hover .flipper {
-        transform: rotateY(180deg);
-        -webkit-transform: rotateY(180deg);
-        -moz-transform: rotateY(180deg);
+      // tamaño de fuente para celulares
+      @include media(xs) {
+        margin: 2rem 0;
+        width: 100%;
+        height: 30%;
       }
 
-      .flipper {
+      // tamaño de fuente para tablet
+      @include media(sm) {
+        margin: 3rem auto;
+        width: 100%;
+        height: 40%;
+      }
+
+      .polaroid-container {
         width: 100%;
         height: 100%;
-        position: relative;
-        transition: 0.6s;
-        transform-style: preserve-3d;
-        -webkit-transition: 0.6s;
-        -webkit-transform-style: preserve-3d;
-        -moz-transition: 0.6s;
-        -moz-transform-style: preserve-3d;
 
-
-        .polaroid-frontal {
-          width: 100%;
-          height: 100%;
-          backface-visibility: hidden;
-          position: absolute;
-          z-index: 2;
-
-          .servicio-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            box-shadow: 1rem 1rem 2rem $sombra;
-          }
-
-          .titulo-frontal-polaroid {
-            background: $blaco-trasparente;
-            position: relative;
-            bottom: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: $fuente-titulos;
-            font-size: 3rem;
-            text-align: center;
-          }
-        }
-
-
-
-        .polaroid-detras {
-          backface-visibility: hidden;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background-image: url(../img/png/fondoFoto.png);
-          background-size: cover;
-          padding: 2rem;
-          object-fit: cover;
-          box-shadow: 1rem 1rem 2rem $sombra;
-          z-index: 3;
+        &:hover .flipper {
           transform: rotateY(180deg);
           -webkit-transform: rotateY(180deg);
           -moz-transform: rotateY(180deg);
+        }
 
-          .titulo-detras-polaroid {
-            font-family: $fuente-titulos;
-            font-size: 3rem;
-            text-align: center;
-            margin: 2rem;
+        .flipper {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          transition: 0.6s;
+          transform-style: preserve-3d;
+          -webkit-transition: 0.6s;
+          -webkit-transform-style: preserve-3d;
+          -moz-transition: 0.6s;
+          -moz-transform-style: preserve-3d;
 
-            // tamaño de fuente para celulares
-            @include media(xs) {
-              font-size: 2rem;
-              margin: 1rem;
+
+          .polaroid-frontal {
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            position: absolute;
+            z-index: 2;
+
+            .servicio-img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              box-shadow: 1rem 1rem 2rem $sombra;
             }
 
-            // tamaño de fuente para tablet
-            @include media(sm) {
-              font-size: 2rem;
+            .titulo-frontal-polaroid {
+              background: $blaco-trasparente;
+              position: relative;
+              bottom: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-family: $fuente-titulos;
+              font-size: 3rem;
+              text-align: center;
             }
           }
 
-          .texto-polaroid {
-            // font-weight: map-get($grosor, bold);
-            // font-style: italic;
-            // font-size: 1.2rem;
-            // text-align: justify;
-            // padding: 1rem;
-            // color: $negro;
-            @include texto(1.2rem, 1rem, si, bold);
 
-            // tamaño de fuente para celulares
-            @include media(xs) {
-              font-size: 0.8rem;
+
+          .polaroid-detras {
+            backface-visibility: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/png/fondoFoto.png);
+            background-size: cover;
+            padding: 2rem;
+            object-fit: cover;
+            box-shadow: 1rem 1rem 2rem $sombra;
+            z-index: 3;
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+
+            .titulo-detras-polaroid {
+              font-family: $fuente-titulos;
+              font-size: 3rem;
+              text-align: center;
+              margin: 2rem;
+
+              // tamaño de fuente para celulares
+              @include media(xs) {
+                font-size: 2rem;
+                margin: 1rem;
+              }
+
+              // tamaño de fuente para tablet
+              @include media(sm) {
+                font-size: 2rem;
+              }
             }
 
-            // tamaño de fuente para tablet
-            @include media(sm) {
-              font-size: 1rem;
+            .texto-polaroid {
+              // font-weight: map-get($grosor, bold);
+              // font-style: italic;
+              // font-size: 1.2rem;
+              // text-align: justify;
+              // padding: 1rem;
+              // color: $negro;
+              @include texto(1.2rem, 1rem, si, bold);
+
+              // tamaño de fuente para celulares
+              @include media(xs) {
+                font-size: 0.8rem;
+              }
+
+              // tamaño de fuente para tablet
+              @include media(sm) {
+                font-size: 1rem;
+              }
             }
+
           }
 
         }
@@ -180,13 +172,13 @@
       }
 
     }
-
   }
 
   .containert-seccion-movile {
-    width: 100%;
+    height:  100%;
     margin-top: 8rem;
-    .titulo-servicio-movile { 
+
+    .titulo-servicio-movile {
       font-family: $fuente-titulos;
       font-size: 2.5rem;
       text-align: center;

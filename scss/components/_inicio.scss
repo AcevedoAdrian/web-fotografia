@@ -7,8 +7,6 @@
  */
 
 .inicio {
-  height: 100vh;
-  width: 100%;
   background-image: linear-gradient(to top, $gradiente-inicio),
     url("../img/png/portada.png");
   background-attachment: fixed;
@@ -19,7 +17,7 @@
 
   // ESTILOS TEXTOS ANDREA BARRIOS - FOTOGRAFIA
   .titulo {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
