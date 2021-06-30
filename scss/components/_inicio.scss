@@ -52,15 +52,7 @@
         }
       }
 
-      // tamaño de fuente para celulares
-      @include media(xs) {
-        font-size: 4rem;
-      }
 
-      // tamaño de fuente para tablet
-      @include media(sm) {
-        font-size: 5rem;
-      }
     }
 
     // H1 FOTOGRAFIA
@@ -72,15 +64,6 @@
       color: $blanco;
       text-shadow: 0.2rem 0.2rem $sombra;
 
-      // tamaño de fuente para celulares
-      @include media(xs) {
-        font-size: 1rem;
-      }
-
-      // tamaño de fuente para tablet
-      @include media(sm) {
-        font-size: 2rem;
-      }
 
     }
 
@@ -134,6 +117,27 @@
   }
 
 
+}
+
+// Estilo Tablet
+@include media(xs) {
+  .inicio {
+
+    // ESTILOS TEXTOS ANDREA BARRIOS - FOTOGRAFIA
+    .titulo {
+
+      // H2 Barrios Andre
+      .titulo-header {
+        font-size: 8rem;
+      }
+
+      // H1 FOTOGRAFIA
+      .subtitulo-header {
+        font-size: 2rem;
+        letter-spacing: 1rem;
+      }
+    }
+  }
 }
 
 /**

@@ -8,7 +8,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 16px;
   text-decoration: none;
   outline: none;
   border: none;
@@ -202,16 +201,6 @@ section {
     background-position: 48vw;
   }
 }
-@media (min-width: 0) and (max-width: 576px) {
-  .inicio .titulo .titulo-header {
-    font-size: 4rem;
-  }
-}
-@media (min-width: 577px) and (max-width: 768px) {
-  .inicio .titulo .titulo-header {
-    font-size: 5rem;
-  }
-}
 .inicio .titulo .subtitulo-header {
   font-family: "Josefin Slab", serif;
   text-align: center;
@@ -219,16 +208,6 @@ section {
   letter-spacing: 2rem;
   color: RGBA(255, 255, 255, 1);
   text-shadow: 0.2rem 0.2rem RGBA(0, 3, 0, 0.7);
-}
-@media (min-width: 0) and (max-width: 576px) {
-  .inicio .titulo .subtitulo-header {
-    font-size: 1rem;
-  }
-}
-@media (min-width: 577px) and (max-width: 768px) {
-  .inicio .titulo .subtitulo-header {
-    font-size: 2rem;
-  }
 }
 .inicio .titulo .boton-sobre-mi {
   position: absolute;
@@ -268,6 +247,15 @@ section {
   }
 }
 
+@media (min-width: 0) and (max-width: 576px) {
+  .inicio .titulo .titulo-header {
+    font-size: 8rem;
+  }
+  .inicio .titulo .subtitulo-header {
+    font-size: 2rem;
+    letter-spacing: 1rem;
+  }
+}
 /**
  * -------------------------------------------------------------------
  **/
@@ -297,7 +285,10 @@ section {
 }
 .sobre-mi .perfil .foto-perfil {
   width: 100%;
-  border: 2rem solid RGBA(255, 255, 255, 1);
+  border-top: 1rem solid RGBA(255, 255, 255, 1);
+  border-left: 1rem solid RGBA(255, 255, 255, 1);
+  border-right: 1rem solid RGBA(255, 255, 255, 1);
+  border-bottom: 5rem solid RGBA(255, 255, 255, 1);
 }
 .sobre-mi .texto-sobre-mi {
   width: 100%;
@@ -336,6 +327,7 @@ section {
     height: 100%;
   }
   .sobre-mi .perfil {
+    margin-left: 25%;
     width: 50%;
   }
 }
@@ -344,6 +336,7 @@ section {
     height: 100%;
   }
   .sobre-mi .perfil {
+    margin-left: 25%;
     width: 50%;
   }
 }

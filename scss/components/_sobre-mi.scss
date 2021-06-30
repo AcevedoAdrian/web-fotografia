@@ -24,11 +24,15 @@
       align-items: center;
       align-content: center;
       justify-content: center;
-    border: 1px solid $negro;
+      border: 1px solid $negro;
 
     .foto-perfil {
       width: 100%;
-      border: 2rem solid $blanco;
+      border-top: 1rem solid $blanco;
+      border-left: 1rem solid $blanco;
+      border-right: 1rem solid $blanco;
+      border-bottom: 5rem solid $blanco;
+      // border: 2rem 1rem solid $blanco;
     }
   }
 
@@ -74,6 +78,7 @@
   .sobre-mi {
     height: 100%;
     .perfil {
+      margin-left: 25%;
       width: 50%;
     }
   }
@@ -84,6 +89,7 @@
   .sobre-mi {
     height: 100%;
     .perfil {
+      margin-left: 25%;
       width: 50%;
     }
   }

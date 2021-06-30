@@ -18,15 +18,22 @@ html {
     @include media(sm){
       font-size: 10px;
     }
-     // tamaño de fuente para celulares
+     // tamaño de fuente para desk
      @include media(md){
       font-size: 12px;
     }
-     // tamaño de fuente para tablet
+     // tamaño de fuente para pantallas mas grandes
     @include media(lg){
       font-size: 14px;
     }
-    
+     // tamaño de fuente para pantallas mas grandes
+     @include media(xl){
+      font-size: 16px;
+    }
+     // tamaño de fuente para pantallas mas grandes
+     @include media(xl){
+      font-size: 18px;
+    }
 
 }
 body{
