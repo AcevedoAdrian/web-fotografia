@@ -9,17 +9,25 @@
  */
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    // tamaño de fuente para celulares
+    @include media(xs){
+      font-size: 8px;
+    }
+     // tamaño de fuente para tablet
+    @include media(sm){
+      font-size: 10px;
+    }
+     // tamaño de fuente para celulares
+     @include media(md){
+      font-size: 12px;
+    }
+     // tamaño de fuente para tablet
+    @include media(lg){
+      font-size: 14px;
+    }
+    
 
-  // tamaño de fuente para celulares
-  @include media(xs){
-    font-size: 10px;
-  }
-   // tamaño de fuente para tablet
-  @include media(sm){
-    font-size: 12px;
-  }
-  
 }
 body{
   font-family: $fuente-parrafo;

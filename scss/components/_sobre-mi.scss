@@ -1,5 +1,5 @@
-@import '../utilities/variables';
-@import '../utilities/mixins';
+@import "../utilities/variables";
+@import "../utilities/mixins";
 /**
  * 02. SOBRE MI
  *
@@ -7,52 +7,58 @@
  */
 
 .sobre-mi {
-  // background-color: #EDE7F6;
   background-color: $rosa-claro;
-  background-image:
-    url("../img/svg/fondo-a2.svg");
+  background-image: url("../img/svg/fondo-a2.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: center center;
   background-size: 100% 100%;
 
-  @include media(md) {
-    height: 100% !important;
-  }
-
-
   .perfil {
     width: 100%;
 
-    @include estilos-subtitulos(column, 0, 0);
+      padding-top: 0 ;
+      padding-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
     border: 1px solid $negro;
 
     .foto-perfil {
       width: 100%;
-      border: 20px solid $blanco;
+      border: 2rem solid $blanco;
     }
   }
-
 
   .texto-sobre-mi {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(2, auto);
-    column-gap: .5em;
-    row-gap: .5em;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
 
     .sub-titulos-div {
-      @include estilos-subtitulos(column, 1rem, 1rem);
+      padding-top: 1rem ;
+      padding-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
     }
 
     p {
       font-weight: map-get($grosor, bold);
-      font-size: 1.4rem;
+      font-size: 1rem;
       text-align: justify;
       padding: 1rem;
       color: $negro;
 
-      // Primera letra 
+      // Primera letra
       &:first-letter {
         font-family: $fuente-titulos;
         font-size: 6rem;
@@ -61,10 +67,27 @@
       }
     }
   }
+}
 
+// Estilo celular
+@include media(xs) {
+  .sobre-mi {
+    height: 100%;
+    .perfil {
+      width: 50%;
+    }
+  }
 }
 
 // Estilo Tablet
+@include media(sm) {
+  .sobre-mi {
+    height: 100%;
+    .perfil {
+      width: 50%;
+    }
+  }
+}
 
 
 /**

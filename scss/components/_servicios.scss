@@ -9,34 +9,15 @@
 .servicios {
   // background-color: $gris;
   background-image: url(../img/svg/fondo-ab.svg);
-  text-align: center;
+  background-repeat: no-repeat, no-repeat;
   background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
+  background-size: 100% 100%;
 
-  // tamaño de fuente para tablet
-  @include media(sm) {
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-  }
 
   .sub-titulos-div {
     @include estilos-subtitulos(row, 0rem, 3rem);
     color: $negro;
 
-    @include media(sm) {
-      color: $blanco;
-    }
   }
 
   .col-poladoid {
@@ -175,24 +156,59 @@
   }
 
   .containert-seccion-movile {
-    height:  100%;
+    z-index: 10;
     margin-top: 8rem;
 
     .titulo-servicio-movile {
       font-family: $fuente-titulos;
-      font-size: 2.5rem;
+      font-size: 4rem;
       text-align: center;
       margin: 2rem;
       color: $blanco;
     }
 
     .texto-servicio-movile {
-      @include texto(1.5rem, 3rem, no, bold);
-      color: $blanco;
+      @include texto(1.5rem, 3rem, no, extrabold);
+      color: #fff;
     }
   }
 
 
+}
+
+// Estilo celular
+@include media(xs) {
+  
+  .servicios{
+  z-index: 8;
+  height: 100%;
+  background-image: url(../img/jpg/shell.jpeg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+   
+    .sub-titulos-div {
+      .sub-titulos{ color: $blanco;}
+    }
+  }
+}
+
+// Estilo Tablet
+@include media(sm) {
+  .servicios{
+    z-index: 8;
+    height: 100%;
+    background-image: url(../img/jpg/shell.jpeg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    .sub-titulos-div {
+      .sub-titulos{ color: $blanco;}
+     
+    }
+  
+  }
 }
 
 /**

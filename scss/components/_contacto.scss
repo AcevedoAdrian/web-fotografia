@@ -55,7 +55,22 @@
 
 
 }
+// Estilo celular
+@include media(xs) {
+  
+  .contacto {
+    height: 100%;
+    
+  }
+}
 
+// Estilo Tablet
+@include media(sm) {
+  .contacto {
+    height: 100%;
+  }
+  
+}
 
 /**
  * -------------------------------------------------------------------

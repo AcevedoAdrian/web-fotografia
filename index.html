@@ -61,7 +61,7 @@
 
 <body>
   <header class="header-principal">
-    <div class="container-lg">
+    <div class="container-fluid">
       <div class="row align-items-center">
         <div class="col-2">
           <!-- Logo de la fotografa -->
@@ -110,7 +110,7 @@
     </div>
   </header>
 
-  <main >
+  <main>
     <!-- Inicio: Inico de la pagina -->
     <section id="inicio" class="inicio">
       <div class="container-lg">
@@ -141,9 +141,9 @@
     <!-- Sesion Sobre Mi:  informacion de la fotografa -->
     <section id="sobre-mi" class="sobre-mi">
       <div class="container-lg">
-        <div class="row align-items-center justify-content-center" data-aos="zoom-in">
+        <div class="row justify-content-center">
           <!-- FOTO DE PERFIL -->
-          <div class="col-lg-5 col-12 ">
+          <div class="col-md-5 col-12 ">
             <div class="perfil">
               <img src="img/jpg/perfil.jpg" alt="Foto de Andrea Barrios mujer de 30 años" class="foto-perfil"
                 loading='lazy' />
@@ -151,7 +151,7 @@
           </div>
 
           <!-- TEXTI SOBRE MI -->
-          <div class="col-lg-7 col-12">
+          <div class="col-md-7 col-12">
             <div class="texto-sobre-mi">
               <!-- TITULO SOBRE MI -->
               <div class="sub-titulos-div">
@@ -187,8 +187,7 @@
     <!-- Sesion Servicios: los servicios que brinda -->
     <section id="servicios" class="servicios ">
       <div class="container-lg">
-        <div class="row align-items-center justify-content-center" data-aos="fade-up"
-          data-aos-anchor-placement="top-center">
+        <div class="row align-items-center justify-content-center">
           <!-- TITULO SECCION -->
           <div class="col-lg-12">
             <div class="sub-titulos-div">
@@ -197,7 +196,7 @@
           </div>
 
           <!-- FOTO CON POLAROID 1 -->
-          <div class="col-lg-6 col-12 col-poladoid  d-none d-sm-none d-md-none d-lg-block"">
+          <div class="col-md-6 col-12 col-poladoid  d-none d-xs-none d-sm-none d-md-block"">
             <div class=" polaroid-grid">
             <div class="polaroid-container">
               <div class="flipper">
@@ -224,7 +223,7 @@
         </div>
 
         <!-- FOTO CON POLAROID 2 -->
-        <div class="col-lg-6 col-12  col-poladoid d-none d-sm-none d-md-none d-lg-block"">
+        <div class="col-md-6 col-12  col-poladoid d-none d-xs-none d-sm-none d-md-block"">
               <div class=" polaroid-grid">
           <div class="polaroid-container">
             <div class="flipper">
@@ -252,7 +251,7 @@
 
 
       <!-- FOTO CON POLAROID 1 -->
-      <div class="col-lg-6   col-12 d-block d-sm-block d-md-block d-lg-none">
+      <div class="  col-12 d-block d-xs-block d-sm-block d-md-none">
         <div class="containert-seccion-movile">
           <h3 class="titulo-servicio-movile">Cumpleaños</h3>
           <p class="texto-servicio-movile">
@@ -267,7 +266,7 @@
       </div>
 
       <!-- FOTO CON POLAROID 1 -->
-      <div class="col-lg-6 col-12 d-block d-sm-block d-md-block d-lg-none">
+      <div class=" col-12 d-block d-xs-block d-sm-block d-md-none">
         <div class="containert-seccion-movile">
           <h3 class="titulo-servicio-movile">Sesion de Fotos</h3>
           <p class="texto-servicio-movile">
@@ -288,40 +287,48 @@
     <!-- Sesion Trabajos: trabajos que realizo-->
     <section id="trabajos" class="trabajos">
       <div class="container-lg">
-        <div class="row align-items-center" data-aos="flip-left">
+        <div class="row ">
           <!-- TITULO SECCION -->
           <div class="col-lg-12">
             <div class="sub-titulos-div">
-              <h2 class="sub-titulos sub-titulo-trabajo">Trabajos</h2>
+              <h2 class="sub-titulos">Trabajos</h2>
+            </div>
+          </div>
+          <!-- TEXTO SOBRE LOS TRABAJOS -->
+          <div class="col-lg-12">
+            <div class="texto-trabajos-div">
+              <p>
+                Te invito a que mires algunos de mis trabajos realizados con mucho amor.
+              </p>
             </div>
           </div>
 
           <!-- RECTANGULO IMAGENES -->
-          <div class="col-lg-12">
-            <div class="galeria-tabajos">
-              <img src="img/jpg/trabajos/trabajo-1.jpg"
-                alt="Torta blanca con lunares y banderines en tonos de lila y rosado; arriba una tierna oveja con un moño morado. "
-                class="foto-trabajos" loading='lazy' />
-              <img src="img/jpg/trabajos/trabajo-2.jpg"
-                alt="Niña con un vestido blanco con flores rojas y unas orejas de minnie, sentada de espalda, junto a su mickey de peluche."
-                class="foto-trabajos" loading='lazy' />
-              <img src="img/jpg/trabajos/trabajo-3.jpg"
-                alt="Niña con una blusa blanca de encaje, vincha con tres rosas, rulos hasta el hombro, sonríe mirando la cámara."
-                class="foto-trabajos" loading='lazy' />
-              <img src="img/jpg/trabajos/trabajo-4.jpg"
-                alt="Niña pequeña con un vestido blanco largo, vincha de color azul y morado, sonrrie mirando al costado."
-                class="foto-trabajos" loading='lazy' />
-              <img src="img/jpg/trabajos/trabajo-5.jpg"
-                alt="Niña vestida de blanco, sentada en la alfombra nude, intenta alcanzar un globo blanco."
-                class="foto-trabajos" loading='lazy' />
-              <img src="img/jpg/trabajos/trabajo-6.jpg"
-                alt="Bebe de un año con un vestido blanco con flores rojas y vincha de Minie, sentada sobre una manta blanca, en un puente junto a su Mickey de peluche."
-                class="foto-trabajos" loading='lazy' />
-            </div>
+          <div class="col-12 col-poladoid  d-none d-xs-none d-sm-none d-md-block"">
+            <div class=" galeria-tabajos">
+            <img src="img/jpg/trabajos/trabajo-1.jpg"
+              alt="Torta blanca con lunares y banderines en tonos de lila y rosado; arriba una tierna oveja con un moño morado. "
+              class="foto-trabajos" loading='lazy' />
+            <img src="img/jpg/trabajos/trabajo-2.jpg"
+              alt="Niña con un vestido blanco con flores rojas y unas orejas de minnie, sentada de espalda, junto a su mickey de peluche."
+              class="foto-trabajos" loading='lazy' />
+            <img src="img/jpg/trabajos/trabajo-3.jpg"
+              alt="Niña con una blusa blanca de encaje, vincha con tres rosas, rulos hasta el hombro, sonríe mirando la cámara."
+              class="foto-trabajos" loading='lazy' />
+            <img src="img/jpg/trabajos/trabajo-4.jpg"
+              alt="Niña pequeña con un vestido blanco largo, vincha de color azul y morado, sonrrie mirando al costado."
+              class="foto-trabajos" loading='lazy' />
+            <img src="img/jpg/trabajos/trabajo-5.jpg"
+              alt="Niña vestida de blanco, sentada en la alfombra nude, intenta alcanzar un globo blanco."
+              class="foto-trabajos" loading='lazy' />
+            <img src="img/jpg/trabajos/trabajo-6.jpg"
+              alt="Bebe de un año con un vestido blanco con flores rojas y vincha de Minie, sentada sobre una manta blanca, en un puente junto a su Mickey de peluche."
+              class="foto-trabajos" loading='lazy' />
           </div>
+        </div>
 
-          <!-- RECTANGULO IMAGENES MOVILE-->
-          <div class="col-lg-12">
+        <!-- RECTANGULO IMAGENES MOVILE-->
+        <!-- <div class="col-12 d-block d-xs-block d-sm-block d-md-none">
             <div class="galeria-tabajos-movil">
               <img src="img/jpg/trabajos/trabajo-1.jpg"
                 alt="Torta blanca con lunares y banderines en tonos de lila y rosado; arriba una tierna oveja con un moño morado. "
@@ -344,17 +351,50 @@
                 class="foto-trabajos-movil" loading='lazy' />
 
             </div>
-          </div>
+          </div> -->
 
-          <!-- TEXTO SOBRE LOS TRABAJOS -->
-          <div class="col-lg-12">
-            <div class="texto-trabajos-div">
-              <p>
-                Te invito a que mires algunos de mis trabajos realizados con mucho amor.
-              </p>
+        <div class="col-12 d-block d-xs-block d-sm-block d-md-none">
+          <div class="galeria-tabajos-movil">
+            <div class="row justify-content-center">
+              <div class="col-5">
+                <img src="img/jpg/trabajos/trabajo-1.jpg"
+                  alt="Torta blanca con lunares y banderines en tonos de lila y rosado; arriba una tierna oveja con un moño morado. "
+                  class="foto-trabajos-movil" loading='lazy' />
+              </div>
+              <div class="col-5">
+                <img src="img/jpg/trabajos/trabajo-2.jpg"
+                  alt="Niña con un vestido blanco con flores rojas y unas orejas de minnie, sentada de espalda, junto a su mickey de peluche."
+                  class="foto-trabajos-movil" loading='lazy' />
+              </div>
+              <div class="col-5">
+                <img src="img/jpg/trabajos/trabajo-4.jpg"
+                  alt="Niña pequeña con un vestido blanco largo, vincha de color azul y morado, sonrrie mirando al costado."
+                  class="foto-trabajos-movil" loading='lazy' />
+              </div>
+              <div class="col-5">
+                <img src="img/jpg/trabajos/trabajo-5.jpg" alt="Niña vestida de blanco, sentada en la alfombra nude, intenta alcanzar un globo blanco. 
+                " class="foto-trabajos-movil" loading='lazy' />
+              </div>
+              <div class="col-5">
+                <img src="img/jpg/trabajos/trabajo-6.jpg" alt="Bebe de un año con un vestido blanco con flores rojas y vincha de Minie, sentada sobre una manta blanca, en un puente junto a su Mickey de peluche.
+                " class="foto-trabajos-movil" loading='lazy' />
+              </div>
+              <div class="col-5">
+                <img src="img/jpg/trabajos/trabajo-10.jpg"
+                  alt="Torta con dos bengalas y una vela encendidas, niña sonriendo muy contenta abraza su muñeca, niños y adultos aplaudiendo."
+                  class="foto-trabajos-movil" loading='lazy' />
+              </div>
+
             </div>
+
+
+
+
+
           </div>
         </div>
+
+      </div>
       </div>
     </section>
     <!-- Fin Sesion -->
@@ -455,7 +495,7 @@
       <div class="container-lg">
         <div class="row justify-content-center">
 
-          <div class="fondo-contacto" data-aos="flip-down">
+          <div class="fondo-contacto">
             <!-- TITULO SECCION -->
             <div class="col-lg-12">
               <div class="sub-titulos-div">
@@ -475,7 +515,7 @@
             <div class="col-lg-6 offset-lg-3">
               <!-- Formulario de contacto -->
               <div class="formulario">
-                <form class="row g-3 needs-validation" novalidate>
+                <form class="row g-3 needs-validation">
                   <div class="col-md-12">
                     <label for="validationCustom01" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre" required />
@@ -533,36 +573,49 @@
 
   <!-- Pie  -->
   <footer class="pie">
-    <div class="container-lg">
+    <div class="container-lg box-container">
       <div class="row align-items-center justify-content-center">
-        <div class="col-md-4 col-12">
-          <div class="redes">
-            <p class="titulo-redes">Seguime en:</p>
-            <nav class="nav-pie">
-              <a href="#!" title="Acceso directo a mi cuenta personal de Instagram"><img src="img/svg/instagram.svg"
-                  class="iconos-redes" alt="" />
-              </a>
-              <a href="#!" title="Acceso directo a mi cuenta personal de Facebook"><img src="img/svg/facebook.svg"
-                  class="iconos-redes" alt="" />
-              </a>
-              <a href="#!" title="Mi numero de telefono para contactarte por whatsapp"><img src="img/svg/whatsapp.svg"
-                  class="iconos-redes" alt="" />
-              </a>
-            </nav>
+        <div class="col-md-3 col-12">
+          <div class="box">
+            <h3>Seguime en</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">pinterest</a>
           </div>
         </div>
-        <div class="col-md-4 col-12 ">
-          <div class="mapa">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.5586505467495!2d-58.98774338461537!3d-27.45186218289834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450dfa218d60b1%3A0x5d28e8aeedb6460e!2sResistencia%20Chaco!5e0!3m2!1ses-419!2sar!4v1620684054213!5m2!1ses-419!2sar"
-              allowfullscreen="" loading="lazy" title="Ubicación donde pueden encontrarme">
-            </iframe>
+        <div class="col-md-3 col-12">
+          <div class="box">
+            <h3>
+              Enlaces Rápidos</h3>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">sobre-mi</a>
+            <a href="#servicios">servicios</a>
+            <a href="#trabajos">trabajos</a>
+            <a href="#galeria">galeria</a>
+            <a href="#contacto">contacto</a>
           </div>
         </div>
-        <div class="col-md-4 col-12 ">
-          <div class="descripcion-pie">
-            <span> © 2021 Adrian Acevedo</span>
+        <div class="col-md-3 col-12">
+          <div class="box">
+            <h3>Contactame</h3>
+            <div class="info">
+              <i class="fas fa-phone"></i>
+              <p> +543624-658782</p>
+            </div>
+            <div class="info">
+              <i class="fas fa-envelope"></i>
+              <p> barriosandreagisel@gmail.com</p>
+            </div>
+            <div class="info">
+              <i class="fas fa-map-marker-alt"></i>
+              <p> mumbai, india - 400104 </p>
+            </div>
           </div>
+        </div>
+
+        <div class="col-12 ">
+          <h2 class="credit"> &copy; copyright @ 2021 by Adrian Acevedo </h2>
+
         </div>
       </div>
     </div>

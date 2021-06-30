@@ -7,48 +7,78 @@
  * -------------------------------------------------------------------
  */
 .pie {
-  padding: 1rem;
-  background: $negro;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  
+  padding-top: 3rem;
+  background-color: $negro;
+  background-size: cover;
+  background-position: center;
 
-  
-  .redes {
-    padding: 1rem 2rem;
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
 
-    .titulo-redes {
-      font-family: $fuente-titulos;
-      margin: 1rem 0;
-      color: $blanco;
-      font-size: 1.5em;
-    }
+    .box {
+     
+      margin: 2rem;
 
-    .nav-pie a {
-      text-decoration: none;
-      .iconos-redes {
-        width: 10%;
-        padding: 0.5rem;
+      h3 {
+        font-size: 2rem;
+        padding: 1rem 0;
+        color: #fff;
+        text-decoration: underline;
+        text-underline-offset: 1rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+        padding: .5rem 0;
+        color: #eee;
+      }
+
+      a {
+        display: block;
+        font-size: 1.5rem;
+        padding: .5rem 0;
+        color: #eee;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .info {
+
+        i {
+          margin: .5rem 0;
+          margin-right: 1rem;
+          border-radius: 50%;
+          background: #fff;
+          color: $rosa;
+          font-size: 1.5rem;
+          height: 3.5rem;
+          width: 3.5rem;
+          line-height: 4.5rem;
+          text-align: center;
+        }
       }
     }
   }
-  
-  .mapa{
-     iframe{
-      @include media(xs) {
-        width: 70%;
-      }
-     }
-  }
-  .descripcion-pie span {
-    text-align: left;
-    color: $gris-oscuro;
-    font-size: 1rem;
-  }
-  
+.credit{
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: .1rem;
+    color:#fff5;
+    border-top: .1rem solid #fff5;
+    padding:2.5rem 1rem;
+    text-align: center;
 }
+}
+
+// Estilo celular
+@include media(xs) {}
+
+// Estilo Tablet
+@include media(sm) {}
 
 
 

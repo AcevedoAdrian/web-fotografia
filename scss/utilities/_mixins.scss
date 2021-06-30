@@ -29,7 +29,7 @@
 @mixin media($media) {
     // celular
     @if $media == xs {
-      @media (max-width: map-get($breakpoints, $media))  and (max-width: map-get($breakpoints, sm)) { @content; }
+      @media (min-width: map-get($breakpoints, $media))  and (max-width: map-get($breakpoints, sm)) { @content; }
     }
     // tablet
     @else if $media == sm {

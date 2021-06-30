@@ -8,13 +8,7 @@
  */
 
 .galeria-personal {
-  @include media(xs) {
-    height: 100%;
-  }
-
-  @include media(sm) {
-    height: 100%;
-  }
+  
   .sub-titulos-div {
     @include estilos-subtitulos(row, 0rem, 1rem);
   }
@@ -33,7 +27,7 @@
     display: block;
     height: 90%;
     /* set min-width, allow images to set cell width */
-    min-width: 300px;
+    min-width: 400px;
     max-width: 50%;
     margin-right: 100px;
   }
@@ -42,6 +36,24 @@
     height: auto;
     max-height: 100%;
   }
+}
+
+
+// Estilo celular
+@include media(xs) {
+  
+  .galeria-personal {
+    height: 100%;
+    
+  }
+}
+
+// Estilo Tablet
+@include media(sm) {
+  .galeria-personal {
+    height: 100%;
+  }
+  
 }
 
 /**

@@ -6,16 +6,16 @@
  * -------------------------------------------------------------------
  */
 .header-principal {
-  width: 100%;
-  padding-top: 2rem;
   position: fixed;
-  top: 1;
+  width: 100%;
+  margin-top: 2rem;  
+  top: 0; left: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   transition: 1s;
-  z-index: 10;
+  z-index: 1000;
 
   // Logo
   .logo {
@@ -26,7 +26,7 @@
   // Efecto al scrollear, cambio el color del fondo
   &.logo-pequeño {
     background: $sombra;
-    padding-top: 0;
+    margin-top: 0;
 
     // Efecto al scrollear, cambio el tamaño del logo
     & .logo {
@@ -82,30 +82,30 @@
         &:hover::before {
           transform: scaleX(1);
         }
+        /* Animacion Linea Link */
+        &[data-animation="to-left"] a::before {
+          transform-origin: right;
+        }
+
+        &[data-animation="center"] a::before {
+          transform-origin: center;
+        }
+
+        &[data-animation="bonus"] a::before {
+          transform-origin: right;
+        }
+
+        &[data-animation="bonus"] a:hover::before {
+          transform-origin: left;
+          transform: scaleX(1);
+          transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+        }
 
       }
       
     }
 
-    /* Animacion Linea Link */
-    &[data-animation="to-left"] a::before {
-      transform-origin: right;
-    }
-
-    &[data-animation="center"] a::before {
-      transform-origin: center;
-    }
-
-    &[data-animation="bonus"] a::before {
-      transform-origin: right;
-    }
-
-    &[data-animation="bonus"] a:hover::before {
-      transform-origin: left;
-      transform: scaleX(1);
-      transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
-    }
-
+    
 
   }
 

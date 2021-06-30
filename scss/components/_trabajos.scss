@@ -7,19 +7,31 @@
  * -------------------------------------------------------------------
  */
 .trabajos {
-  
   background-color: $rosa-claro;
   background-image: 
     url("../img/svg/fondo-b.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: 100% 100%;
-  // Estilos Movile
-  @include media(xs) {
-    height: 100%;
-  }
-  // Estilo Tablet
-  @include media(sm) {
-    height: 100%;
+  
+  // Texto de abajo
+  .texto-trabajos-div {
+    @include estilos-subtitulos(row, 0,0);
+
+    p {
+      background: url("../img/gif/cierra.gif") no-repeat right bottom;
+      padding-left: 18px;
+      padding-right: 18px;
+      text-indent: -18px;
+      font-weight: map-get($grosor, bold);
+      font-size: 1.4rem;
+      text-align: justify;
+      color: $negro;
+     
+     &:first-letter {
+        background: url('../img/gif/abre.gif') no-repeat left top;
+        padding-left: 18px;
+     }
+    }
   }
 
 
@@ -31,7 +43,7 @@
   // Lista de Fotss
   .galeria-tabajos {
     width: 100%;
-    height: 60%;
+    height: 100%;
     @include estilos-subtitulos(row, 1rem, 2rem);
     flex-grow: 1;
 
@@ -62,51 +74,47 @@
 
   }
 
-  // Texto de abajo
-  .texto-trabajos-div {
-    @include estilos-subtitulos(row, 2rem, 1rem);
-
-    p {
-      background: url("../img/gif/cierra.gif") no-repeat right bottom;
-      padding-left: 18px;
-      padding-right: 18px;
-      text-indent: -18px;
-      font-weight: map-get($grosor, bold);
-      font-size: 1.4rem;
-      text-align: justify;
-      color: $negro;
-     
-     &:first-letter {
-        background: url('../img/gif/abre.gif') no-repeat left top;
-        padding-left: 18px;
-     }
-    }
-  }
+  
 
 
   // Movile
-  .galeria-tabajos-movil {
-    display: none;
-    grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(1, auto);
-    row-gap: 0.5rem;
-
-    @include media(xs) {
-      display: grid;
-    }
-  }
+  // .galeria-tabajos-movil {
+  //   grid-template-columns: repeat(2, auto);
+  //   grid-template-rows: repeat(2, auto);
+  //   display: grid;
+  //   row-gap: 0.5rem;
+  // }
 
   .galeria-tabajos-movil img {
     width: 100%;
-    height: 100%;
+    height: 90%;
     object-fit: cover;
-    margin: auto;
-    border: 1px solid var(--GRIS);
-    box-shadow: 1rem 1rem 2rem var(--SOMBRAS);
+    margin: 1rem;
+    border: 1px solid $gris;
+    box-shadow: 1rem 1rem 2rem $gris;
   }
 
 
 }
+
+
+// Estilo celular
+@include media(xs) {
+  
+  .trabajos{
+    height: 100%;
+    
+  }
+}
+
+// Estilo Tablet
+@include media(sm) {
+  .trabajos{
+    height: 100%;
+  }
+  
+}
+
 
 /**
  * -------------------------------------------------------------------
