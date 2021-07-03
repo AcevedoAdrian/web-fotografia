@@ -8,14 +8,14 @@
  */
 .trabajos {
   background-color: $rosa-claro;
-  background-image: 
+  background-image:
     url("../img/svg/fondo-b.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: 100% 100%;
-  
+
   // Texto de abajo
   .texto-trabajos-div {
-    @include estilos-subtitulos(row, 0,0);
+    @include estilos-subtitulos(row, 0, 0);
 
     p {
       background: url("../img/gif/cierra.gif") no-repeat right bottom;
@@ -26,64 +26,118 @@
       font-size: 1.4rem;
       text-align: justify;
       color: $negro;
-     
-     &:first-letter {
+
+      &:first-letter {
         background: url('../img/gif/abre.gif') no-repeat left top;
         padding-left: 18px;
-     }
+      }
     }
   }
 
 
   // Titulo Trabajos
   .sub-titulos-div {
-    @include estilos-subtitulos(row, 0rem, 1rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    color: $negro;
+
+    i {
+      margin: .5rem 0;
+      margin-right: 1rem;
+      color: $negro;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
   }
 
   // Lista de Fotss
+
+  // .galeria-tabajos {
+  //   width: 100%;
+  //   height: 100%;
+  //   @include estilos-subtitulos(row, 1rem, 2rem);
+  //   flex-grow: 1;
+
+  // tamaño de fuente para celulares
+  @include media(xs) {
+    display: none;
+  }
+
+
+
+  // .foto-trabajos {
+  //   height: 100%;
+  //   width: 10%;
+  //   filter: grayscale(100%);
+  //   transition: transform 0.7s;
+  //   object-fit: cover;
+  //   flex-grow: 1;
+
+  //   &:hover {
+  //     filter: grayscale(0%);
+  //     transform: scale(1.1);
+  //     width: 30%;
+  //     margin: 0 2rem;
+  //     transition: transform 0.7s;
+  //     object-fit: fill;
+  //   }
+  // }
+
   .galeria-tabajos {
+    display: flex;
     width: 100%;
+    padding: 4% 2%;
+    box-sizing: border-box;
     height: 100%;
-    @include estilos-subtitulos(row, 1rem, 2rem);
-    flex-grow: 1;
-
-    // tamaño de fuente para celulares
-    @include media(xs) {
-      display: none;
-    }
 
 
+    .caja-img {
+      flex: 1;
+      overflow: hidden;
+      transition: .5s;
+      margin: 0;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
+      line-height: 0;
 
-    .foto-trabajos {
-      height: 100%;
-      width: 10%;
-      filter: grayscale(100%);
-      transition: transform 0.5s;
-      object-fit: cover;
-      flex-grow: 1;
+      &>img {
+        width: 200%;
+        height: 100%;
+        object-fit: cover;
+        transition: .5s;
+        filter: grayscale(100%);
+      }
 
       &:hover {
-        filter: grayscale(0%);
-        transform: scale(1.1);
-        width: 30%;
-        margin: 0 2rem;
-        transition: transform 0.5s;
-        object-fit: fill;
+        flex: 1 1 50%;
       }
+
+      &:hover>img {
+        width: 100%;
+        height: 100%;filter: grayscale(0%);
+      }
+
+
+
     }
+
+    // }
+
+
+
+
+
 
   }
 
-  
 
 
-  // Movile
-  // .galeria-tabajos-movil {
-  //   grid-template-columns: repeat(2, auto);
-  //   grid-template-rows: repeat(2, auto);
-  //   display: grid;
-  //   row-gap: 0.5rem;
-  // }
 
   .galeria-tabajos-movil img {
     width: 100%;
@@ -100,19 +154,19 @@
 
 // Estilo celular
 @include media(xs) {
-  
-  .trabajos{
+
+  .trabajos {
     height: 100%;
-    
+
   }
 }
 
 // Estilo Tablet
 @include media(sm) {
-  .trabajos{
+  .trabajos {
     height: 100%;
   }
-  
+
 }
 
 

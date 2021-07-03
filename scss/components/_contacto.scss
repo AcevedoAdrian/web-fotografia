@@ -8,7 +8,7 @@
  */
 .contacto {
 
-  padding: 5% 0 ;
+  padding: 5% 0;
   background-image: url(../img/jpg/servicios/servicio-1.jpg);
   text-align: center;
   background-position: center center;
@@ -37,11 +37,28 @@
 
 
     .sub-titulos-div {
-      @include estilos-subtitulos(row, 1rem, 1rem);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      color: $negro;
+
+      i {
+        margin: .5rem 0;
+        margin-right: 1rem;
+        color: $negro;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
     }
 
     p {
-      font-weight: map-get($grosor , extrabold );
+      font-weight: map-get($grosor, extrabold);
       font-size: 1.2rem;
       text-align: justify;
       padding: 1rem;
@@ -55,12 +72,13 @@
 
 
 }
+
 // Estilo celular
 @include media(xs) {
-  
+
   .contacto {
     height: 100%;
-    
+
   }
 }
 
@@ -69,7 +87,7 @@
   .contacto {
     height: 100%;
   }
-  
+
 }
 
 /**

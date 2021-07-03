@@ -11,7 +11,6 @@
   text-decoration: none;
   outline: none;
   border: none;
-  text-transform: capitalize;
 }
 
 /**
@@ -45,14 +44,6 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-}
-
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-  height: 100%;
-}
-
-.row {
-  height: 100%;
 }
 
 section {
@@ -308,6 +299,18 @@ section {
   align-content: center;
   justify-content: center;
 }
+.sobre-mi .texto-sobre-mi .sub-titulos-div span hr {
+  height: 10px;
+  width: 50px;
+  background-color: black;
+}
+.sobre-mi .texto-sobre-mi .sub-titulos-div span i {
+  margin: 0.5rem 0;
+  margin-right: 1rem;
+  color: RGBA(9, 9, 13, 1);
+  font-size: 1.5rem;
+  text-align: center;
+}
 .sobre-mi .texto-sobre-mi p {
   font-weight: 300;
   font-size: 1rem;
@@ -379,48 +382,57 @@ section {
   padding-left: 18px;
 }
 .trabajos .sub-titulos-div {
-  padding-top: 0rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   align-content: center;
   justify-content: center;
+  color: RGBA(9, 9, 13, 1);
 }
-.trabajos .galeria-tabajos {
-  width: 100%;
-  height: 100%;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  flex-grow: 1;
+.trabajos .sub-titulos-div i {
+  margin: 0.5rem 0;
+  margin-right: 1rem;
+  color: RGBA(9, 9, 13, 1);
+  font-size: 1.5rem;
+  text-align: center;
 }
 @media (min-width: 0) and (max-width: 576px) {
-  .trabajos .galeria-tabajos {
+  .trabajos {
     display: none;
   }
 }
-.trabajos .galeria-tabajos .foto-trabajos {
+.trabajos .galeria-tabajos {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
   height: 100%;
-  width: 10%;
-  filter: grayscale(100%);
-  transition: transform 0.5s;
-  object-fit: cover;
-  flex-grow: 1;
 }
-.trabajos .galeria-tabajos .foto-trabajos:hover {
+.trabajos .galeria-tabajos .caja-img {
+  flex: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 0;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  line-height: 0;
+}
+.trabajos .galeria-tabajos .caja-img > img {
+  width: 200%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  filter: grayscale(100%);
+}
+.trabajos .galeria-tabajos .caja-img:hover {
+  flex: 1 1 50%;
+}
+.trabajos .galeria-tabajos .caja-img:hover > img {
+  width: 100%;
+  height: 100%;
   filter: grayscale(0%);
-  transform: scale(1.1);
-  width: 30%;
-  margin: 0 2rem;
-  transition: transform 0.5s;
-  object-fit: fill;
 }
 .trabajos .galeria-tabajos-movil img {
   width: 100%;
@@ -456,15 +468,22 @@ section {
   background-size: 100% 100%;
 }
 .servicios .sub-titulos-div {
-  padding-top: 0rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   align-content: center;
   justify-content: center;
   color: RGBA(9, 9, 13, 1);
+}
+.servicios .sub-titulos-div i {
+  margin: 0.5rem 0;
+  margin-right: 1rem;
+  color: RGBA(0, 3, 0, 0.7);
+  font-size: 1.5rem;
+  text-align: center;
 }
 .servicios .col-poladoid {
   height: 100%;
@@ -638,14 +657,22 @@ section {
  * -------------------------------------------------------------------
  */
 .galeria-personal .sub-titulos-div {
-  padding-top: 0rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   align-content: center;
   justify-content: center;
+  color: RGBA(9, 9, 13, 1);
+}
+.galeria-personal .sub-titulos-div i {
+  margin: 0.5rem 0;
+  margin-right: 1rem;
+  color: RGBA(9, 9, 13, 1);
+  font-size: 1.5rem;
+  text-align: center;
 }
 .galeria-personal .carousel .carousel-inner {
   height: 100%;
@@ -715,11 +742,19 @@ section {
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   align-content: center;
   justify-content: center;
+  color: RGBA(9, 9, 13, 1);
+}
+.contacto .fondo-contacto .sub-titulos-div i {
+  margin: 0.5rem 0;
+  margin-right: 1rem;
+  color: RGBA(9, 9, 13, 1);
+  font-size: 1.5rem;
+  text-align: center;
 }
 .contacto .fondo-contacto p {
   font-weight: 400;
