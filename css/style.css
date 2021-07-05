@@ -656,7 +656,11 @@ section {
  *
  * -------------------------------------------------------------------
  */
-.galeria-personal .sub-titulos-div {
+.galeria-personal {
+  padding-top: 0;
+  background-color: #EDE7F6;
+}
+.galeria-personal .carousel .carousel-indicators .sub-titulos-div {
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;
@@ -665,14 +669,22 @@ section {
   align-items: center;
   align-content: center;
   justify-content: center;
-  color: RGBA(9, 9, 13, 1);
 }
-.galeria-personal .sub-titulos-div i {
-  margin: 0.5rem 0;
-  margin-right: 1rem;
-  color: RGBA(9, 9, 13, 1);
-  font-size: 1.5rem;
-  text-align: center;
+.galeria-personal .carousel .carousel-indicators .sub-titulos-div .sub-titulos {
+  color: RGBA(255, 255, 255, 1);
+}
+.galeria-personal .carousel .carousel-indicators [data-bs-target] {
+  text-indent: 0;
+  background-color: transparent;
+  height: 2rem;
+}
+.galeria-personal .carousel .carousel-indicators a {
+  text-decoration: none;
+  color: RGBA(255, 255, 255, 1);
+  font-size: 2.5rem;
+}
+.galeria-personal .carousel .carousel-indicators a i {
+  font-size: 2rem;
 }
 .galeria-personal .carousel .carousel-inner {
   height: 100%;
@@ -680,17 +692,18 @@ section {
 .galeria-personal .carousel .carousel-inner .carousel-item {
   height: 100%;
 }
-.galeria-personal .carousel-image {
-  display: block;
-  height: 90%;
-  /* set min-width, allow images to set cell width */
-  min-width: 400px;
-  max-width: 50%;
-  margin-right: 100px;
+.galeria-personal .carousel .carousel-inner .carousel-item img {
+  max-height: 1080px;
+  object-fit: cover;
 }
-.galeria-personal .carousel.is-fullscreen .carousel-image {
-  height: auto;
-  max-height: 100%;
+.galeria-personal .carousel .carousel-control-next, .galeria-personal .carousel .carousel-control-prev {
+  height: 100px;
+  width: 60px;
+  padding: 12px;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  background-color: #E1BEE7;
 }
 
 @media (min-width: 0) and (max-width: 576px) {
