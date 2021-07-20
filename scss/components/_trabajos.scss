@@ -47,48 +47,8 @@
     justify-content: center;
     color: $negro;
 
-    i {
-      margin: .5rem 0;
-      margin-right: 1rem;
-      color: $negro;
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
+   
   }
-
-  // Lista de Fotss
-
-  // .galeria-tabajos {
-  //   width: 100%;
-  //   height: 100%;
-  //   @include estilos-subtitulos(row, 1rem, 2rem);
-  //   flex-grow: 1;
-
-  // tamaño de fuente para celulares
-  @include media(xs) {
-    display: none;
-  }
-
-
-
-  // .foto-trabajos {
-  //   height: 100%;
-  //   width: 10%;
-  //   filter: grayscale(100%);
-  //   transition: transform 0.7s;
-  //   object-fit: cover;
-  //   flex-grow: 1;
-
-  //   &:hover {
-  //     filter: grayscale(0%);
-  //     transform: scale(1.1);
-  //     width: 30%;
-  //     margin: 0 2rem;
-  //     transition: transform 0.7s;
-  //     object-fit: fill;
-  //   }
-  // }
 
   .galeria-tabajos {
     display: flex;
@@ -120,19 +80,13 @@
 
       &:hover>img {
         width: 100%;
-        height: 100%;filter: grayscale(0%);
+        height: 100%;
+        filter: grayscale(0%);
       }
 
 
 
     }
-
-    // }
-
-
-
-
-
 
   }
 
@@ -155,13 +109,14 @@
 
   .trabajos {
     height: 100%;
-
+    padding-bottom: 5rem;
   }
 }
 
 // Estilo Tablet
 @include media(sm) {
   .trabajos {
+    padding-bottom: 5rem;
     height: 100%;
   }
 

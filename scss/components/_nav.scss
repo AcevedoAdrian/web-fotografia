@@ -16,7 +16,9 @@
   align-items: center;
   transition: 1s;
   z-index: 1000;
-
+  .navbar>.container {
+    justify-content: flex-end;
+}
   // Logo
   .logo {
     padding: 1rem;
@@ -105,12 +107,7 @@
       
     }
 
-    
-
   }
-
-
-
 }
 
 /**

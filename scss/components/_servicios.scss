@@ -24,17 +24,8 @@
     align-content: center;
     justify-content: center;
     color: $negro;
-    i {
-      margin: .5rem 0;
-      margin-right: 1rem;
-      color: $sombra;
-      font-size: 1.5rem;
-      text-align: center;
+    
   }
-
-  }
-
-  
 
 
   .col-poladoid {
@@ -175,6 +166,7 @@
   .containert-seccion-movile {
     z-index: 10;
     margin-top: 8rem;
+    background-color: rgba(0,0,0,0.5);
 
     .titulo-servicio-movile {
       font-family: $fuente-titulos;
@@ -182,6 +174,10 @@
       text-align: center;
       margin: 2rem;
       color: $blanco;
+      text-decoration: underline;
+      text-underline-offset: 1rem;
+      padding: 1rem 0;
+      
     }
 
     .texto-servicio-movile {
@@ -206,6 +202,9 @@
    
     .sub-titulos-div {
       .sub-titulos{ color: $blanco;}
+      .fa-camera-retro{
+        color: $blanco ;
+      }
     }
   }
 }
@@ -221,12 +220,17 @@
     background-repeat: no-repeat;
   
     .sub-titulos-div {
-      .sub-titulos{ color: $blanco;}
-     
+      .sub-titulos{ color: $blanco;
+      
+      }
+      .fa-camera-retro{
+        color: $blanco ;
+      }
     }
   
   }
 }
+
 
 /**
  * -------------------------------------------------------------------
