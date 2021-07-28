@@ -13,7 +13,7 @@
   background-repeat: no-repeat, no-repeat;
   background-size: 100% 100%;
 
-  // Texto de abajo
+  // TEXTO DE ABAJO
   .texto-trabajos-div {
     @include estilos-subtitulos(row, 0, 0);
 
@@ -23,7 +23,7 @@
       padding-right: 18px;
       text-indent: -18px;
       font-weight: map-get($grosor, bold);
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       text-align: justify;
       color: $negro;
 
@@ -35,7 +35,7 @@
   }
 
 
-  // Titulo Trabajos
+  // TITULO DEL TRABAJO
   .sub-titulos-div {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -47,9 +47,10 @@
     justify-content: center;
     color: $negro;
 
-   
+
   }
 
+  // ESTILOS DESK
   .galeria-tabajos {
     display: flex;
     width: 100%;
@@ -90,7 +91,7 @@
 
   }
 
-
+  // ESTILOS CUANDO SE PARA A MOVILE
   .galeria-tabajos-movil img {
     width: 100%;
     height: 90%;

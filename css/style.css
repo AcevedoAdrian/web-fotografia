@@ -312,7 +312,7 @@ section {
 }
 .sobre-mi .texto-sobre-mi p {
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: justify;
   padding: 1rem;
   color: RGBA(9, 9, 13, 1);
@@ -332,6 +332,9 @@ section {
     margin-left: 25%;
     width: 50%;
   }
+  .sobre-mi .texto-sobre-mi p {
+    font-size: 1.8rem;
+  }
 }
 @media (min-width: 577px) and (max-width: 768px) {
   .sobre-mi {
@@ -340,6 +343,9 @@ section {
   .sobre-mi .perfil {
     margin-left: 25%;
     width: 50%;
+  }
+  .sobre-mi .texto-sobre-mi p {
+    font-size: 2em;
   }
 }
 /**
@@ -485,7 +491,7 @@ section {
 }
 .servicios .containert-seccion-movile {
   z-index: 10;
-  margin-top: 8rem;
+  margin-top: 4rem;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .servicios .containert-seccion-movile .titulo-servicio-movile {
@@ -503,9 +509,9 @@ section {
   font-size: 1.5rem;
   text-align: justify;
   font-style: none;
-  padding: 3rem;
+  padding: 3.5rem;
   color: RGBA(9, 9, 13, 1);
-  color: #fff;
+  color: RGBA(255, 255, 255, 1);
 }
 
 @media (min-width: 0) and (max-width: 576px) {
@@ -570,7 +576,7 @@ section {
   padding-right: 18px;
   text-indent: -18px;
   font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   text-align: justify;
   color: RGBA(9, 9, 13, 1);
 }
@@ -650,7 +656,9 @@ section {
  */
 .galeria-personal {
   padding-top: 0;
-  background-color: RGBA(255, 255, 255, 1);
+  background-image: url("../img/svg/fondo-galeria.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 100%;
 }
 .galeria-personal .carousel .carousel-indicators {
   padding-bottom: 4vh;
@@ -703,8 +711,12 @@ section {
     height: 100%;
     padding: 5rem 0;
   }
+  .galeria-personal .carousel .carousel-indicators {
+    padding-bottom: 2vh;
+  }
   .galeria-personal .carousel .carousel-indicators .fa-camera-retro {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    padding: 0;
   }
 }
 @media (min-width: 577px) and (max-width: 768px) {
@@ -713,7 +725,7 @@ section {
     padding: 5rem 0;
   }
   .galeria-personal .carousel .carousel-indicators .fa-camera-retro {
-    font-size: 0.2rem;
+    font-size: 2rem;
   }
 }
 /**

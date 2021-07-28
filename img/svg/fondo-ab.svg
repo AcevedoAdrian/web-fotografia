@@ -3,9 +3,9 @@
     <style>
       .cls-1 {
         font-size: 600px;
-        fill: #f3e5f5;
-        font-family: "Dancing Script";
-        font-weight: 700;
+        fill: #d3d3d3;
+        font-family:  "Dancing Script", cursive;
+        font-weight: 300;
       }
     </style>
   </defs>

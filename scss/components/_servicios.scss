@@ -7,7 +7,6 @@
  * -------------------------------------------------------------------
  */
 .servicios {
-  // background-color: $gris;
   background-image: url(../img/svg/fondo-ab.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: center center;
@@ -51,6 +50,7 @@
         height: 40%;
       }
 
+      // Contenedor de la imagen
       .polaroid-container {
         width: 100%;
         height: 100%;
@@ -61,6 +61,7 @@
           -moz-transform: rotateY(180deg);
         }
 
+        // Efecto para hacer flipp
         .flipper {
           width: 100%;
           height: 100%;
@@ -72,7 +73,7 @@
           -moz-transition: 0.6s;
           -moz-transform-style: preserve-3d;
 
-
+          // Estilos por delante 
           .polaroid-frontal {
             width: 100%;
             height: 100%;
@@ -100,7 +101,7 @@
           }
 
 
-
+          // Cuando da vuelta la imagen 
           .polaroid-detras {
             backface-visibility: hidden;
             position: absolute;
@@ -135,12 +136,7 @@
             }
 
             .texto-polaroid {
-              // font-weight: map-get($grosor, bold);
-              // font-style: italic;
-              // font-size: 1.2rem;
-              // text-align: justify;
-              // padding: 1rem;
-              // color: $negro;
+              
               @include texto(1.2rem, 1rem, si, bold);
 
               // tamaño de fuente para celulares
@@ -165,8 +161,8 @@
 
   .containert-seccion-movile {
     z-index: 10;
-    margin-top: 8rem;
-    background-color: rgba(0,0,0,0.5);
+    margin-top: 4rem;
+    background-color: $fondoServicios;
 
     .titulo-servicio-movile {
       font-family: $fuente-titulos;
@@ -181,8 +177,8 @@
     }
 
     .texto-servicio-movile {
-      @include texto(1.5rem, 3rem, no, extrabold);
-      color: #fff;
+      @include texto(1.5rem, 3.5rem, no, extrabold);
+      color: $blanco;
     }
   }
 

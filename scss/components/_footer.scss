@@ -16,7 +16,7 @@
 
     .box {
       margin: 2rem;
-
+      // TITULO DE LAS SECCIONES
       h3 {
         font-family: $fuente-titulos;
         font-size: 1.5rem;
@@ -31,7 +31,7 @@
         padding: .5rem 0;
         color: #eee;
       }
-
+      // LOS ENLACES 
       a {
         display: block;
         font-size: 1rem;
@@ -61,6 +61,8 @@
       }
     }
   }
+
+  // DATOS DE MI 
 .credit{
     font-size: 1rem;
     font-weight: normal;
